@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=5">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=5">
-      <img alt="Abd-Alrahman Ayyash — Founder, CEO & Systems Architect at Qodra Systems" src="./assets/hero-dark.svg?v=5" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=6">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=6">
+      <img alt="Abd-Alrahman Ayyash — Chief Executive Officer at Qodra Systems" src="./assets/hero-dark.svg?v=6" width="100%">
     </picture>
   </a>
 </p>
@@ -20,7 +20,7 @@
 
 ### About & Current Focus
 
-> **Founder & Chief Executive Officer at [Qodra Systems](https://github.com/qodrasystems)** · Amman, Jordan.
+> **Chief Executive Officer at [Qodra Systems](https://github.com/qodrasystems)** · Amman, Jordan.
 > Building mission-critical operational software since 2018 — where relational database integrity, real-time execution, and clean UX power day-to-day enterprise operations.
 
 | Focus Area | Architecture & Execution |
@@ -51,7 +51,7 @@
 ---
 
 <p align="center" dir="rtl">
-  <sub><strong>عبدالرحمن عياش</strong> · المؤسس والمدير التنفيذي — <strong>شركة قدرة للأنظمة</strong> · عمّان، الأردن</sub>
+  <sub><strong>عبدالرحمن عياش</strong> · المدير التنفيذي — <strong>شركة قدرة للأنظمة</strong> · عمّان، الأردن</sub>
 </p>
 
 <p align="center" dir="ltr">
