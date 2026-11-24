@@ -62,17 +62,17 @@
     <line x1="390" y1="128" x2="608" y2="128" stroke="#20273C" stroke-width="1"/>
     <line x1="500" y1="62" x2="500" y2="190" stroke="#20273C" stroke-width="1"/>
     
-        <text x="392" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#818CF8">25+</text>
-        <text x="392" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">QODRA OS MODULES</text>
+        <text x="392" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#818CF8">4.5M+</text>
+        <text x="392" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">LINES OF CODE</text>
         
-        <text x="512" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#34D399">9+</text>
-        <text x="512" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">INDUSTRY SECTORS</text>
+        <text x="512" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#34D399">25+</text>
+        <text x="512" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">QODRA OS MODULES</text>
         
         <text x="392" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#F8FAFC">32</text>
         <text x="392" y="183" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">REPOSITORIES</text>
         
-        <text x="512" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#F8FAFC">2018</text>
-        <text x="512" y="183" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">BUILDING SINCE</text>
+        <text x="512" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#F8FAFC">9+</text>
+        <text x="512" y="183" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="#8B95B0">INDUSTRY SECTORS</text>
         
 
     <text x="634" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="#8B95B0">CORE EXPERTISE</text>
