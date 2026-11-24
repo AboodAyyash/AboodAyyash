@@ -1,0 +1,39 @@
+name: Refresh Executive Dashboard Telemetry
+
+on:
+  schedule:
+    # Every Sunday at 04:00 UTC
+    - cron: "0 4 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate dashboard SVG assets
+        env:
+          PROFILE_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+        run: python3 scripts/generate_dashboard.py
+
+      - name: Commit updated assets if changed
+        run: |
+          if [[ -n "$(git status --porcelain assets/)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/*.svg
+            git commit -m "chore: refresh dashboard telemetry"
+            git push
+          else
+            echo "Dashboard assets already up to date."
+          fi

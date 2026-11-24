@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="216" viewBox="0 0 840 216" role="img" aria-label="Engineering Telemetry and 12-Month Velocity">
+  <defs>
+    <style>
+      .peak-halo {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: peakPulse 3s ease-out infinite;
+      }
+      @keyframes peakPulse {
+        0% { transform: scale(1); opacity: 0.7; }
+        75% { transform: scale(2.6); opacity: 0; }
+        100% { transform: scale(2.6); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) { .peak-halo { animation: none !important; } }
+    </style>
+    <linearGradient id="tel_bg_light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFBF8"/>
+      <stop offset="100%" stop-color="#F5F2EB"/>
+    </linearGradient>
+    <linearGradient id="area_light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.01"/>
+    </linearGradient>
+    <clipPath id="tel_clip_light">
+      <rect x="0.5" y="0.5" width="839" height="215" rx="14"/>
+    </clipPath>
+    <clipPath id="bar_clip_light">
+      <rect x="632" y="70" width="182" height="8" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tel_clip_light)">
+    <rect width="840" height="216" fill="url(#tel_bg_light)"/>
+    <line x1="20" y1="1.5" x2="820" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1"/>
+
+    <!-- Header Strip -->
+    <text x="26" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.1" fill="#4338CA">ENGINEERING TELEMETRY  ·  12-MONTH VELOCITY</text>
+    <circle cx="640" cy="26.5" r="3.2" fill="#166549"/>
+    <text x="650" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600" letter-spacing="0.6" fill="#66627D">PRIVATE + PUBLIC AGGREGATED</text>
+    <line x1="24" y1="44" x2="816" y2="44" stroke="#E2DDD4" stroke-width="1"/>
+
+    <!-- Zone A: Velocity Chart -->
+    <line x1="26" y1="74" x2="364" y2="74" stroke="#E6E1D8" stroke-width="1" stroke-dasharray="2 4"/>
+    <line x1="26" y1="123" x2="364" y2="123" stroke="#E6E1D8" stroke-width="1" stroke-dasharray="2 4"/>
+    <line x1="26" y1="172" x2="364" y2="172" stroke="#E6E1D8" stroke-width="1"/>
+
+    <path d="M 28.00 164.06 C 33.03 163.74, 48.12 162.02, 58.18 162.19 C 68.24 162.36, 78.30 164.92, 88.36 165.07 C 98.42 165.22, 108.48 163.69, 118.55 163.10 C 128.61 162.51, 138.67 162.29, 148.73 161.53 C 158.79 160.78, 168.85 158.66, 178.91 158.55 C 188.97 158.45, 199.03 161.02, 209.09 160.90 C 219.15 160.78, 229.21 158.03, 239.27 157.83 C 249.33 157.62, 259.39 162.08, 269.45 159.69 C 279.52 157.30, 289.58 149.52, 299.64 143.49 C 309.70 137.46, 319.76 135.09, 329.82 123.51 C 339.88 111.93, 354.97 82.25, 360.00 74.00 L 360.00 172.00 L 28.00 172.00 Z" fill="url(#area_light)"/>
+    <path d="M 28.00 164.06 C 33.03 163.74, 48.12 162.02, 58.18 162.19 C 68.24 162.36, 78.30 164.92, 88.36 165.07 C 98.42 165.22, 108.48 163.69, 118.55 163.10 C 128.61 162.51, 138.67 162.29, 148.73 161.53 C 158.79 160.78, 168.85 158.66, 178.91 158.55 C 188.97 158.45, 199.03 161.02, 209.09 160.90 C 219.15 160.78, 229.21 158.03, 239.27 157.83 C 249.33 157.62, 259.39 162.08, 269.45 159.69 C 279.52 157.30, 289.58 149.52, 299.64 143.49 C 309.70 137.46, 319.76 135.09, 329.82 123.51 C 339.88 111.93, 354.97 82.25, 360.00 74.00" fill="none" stroke="#4F46E5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="360.00" cy="74.00" r="4.5" fill="#166549" class="peak-halo"/>
+    <circle cx="360.00" cy="74.00" r="4" fill="#166549" stroke="#FCFBF8" stroke-width="1.5"/>
+    <text x="28.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">D</text><text x="58.2" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">J</text><text x="88.4" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">F</text><text x="118.5" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">M</text><text x="148.7" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">A</text><text x="178.9" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">M</text><text x="209.1" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">J</text><text x="239.3" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">J</text><text x="269.5" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">A</text><text x="299.6" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">S</text><text x="329.8" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="500" fill="#66627D">O</text><text x="360.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#4338CA">N</text>
+
+    <!-- Vertical Zone Dividers -->
+    <line x1="382" y1="56" x2="382" y2="196" stroke="#E2DDD4" stroke-width="1"/>
+    <line x1="614" y1="56" x2="614" y2="196" stroke="#E2DDD4" stroke-width="1"/>
+
+    <!-- Zone B: 2x2 KPIs -->
+    <line x1="396" y1="128" x2="600" y2="128" stroke="#E2DDD4" stroke-width="1"/>
+    <line x1="498" y1="62" x2="498" y2="190" stroke="#E2DDD4" stroke-width="1"/>
+    
+        <text x="398" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" font-weight="700" letter-spacing="-0.5" fill="#4338CA">2,610+</text>
+        <text x="398" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="8.8" font-weight="600" letter-spacing="0.5" fill="#66627D">12M ACTIVITY</text>
+        
+        <text x="514" y="96" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" font-weight="700" letter-spacing="-0.5" fill="#17162B">32</text>
+        <text x="514" y="113" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="8.8" font-weight="600" letter-spacing="0.5" fill="#66627D">REPOSITORIES</text>
+        
+        <text x="398" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" font-weight="700" letter-spacing="-0.5" fill="#166549">25</text>
+        <text x="398" y="183" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="8.8" font-weight="600" letter-spacing="0.5" fill="#66627D">ACTIVE IN 2026</text>
+        
+        <text x="514" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="21" font-weight="700" letter-spacing="-0.5" fill="#17162B">2018</text>
+        <text x="514" y="183" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="8.8" font-weight="600" letter-spacing="0.5" fill="#66627D">BUILDING SINCE</text>
+        
+
+    <!-- Zone C: Codebase DNA -->
+    <text x="632" y="61" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600" letter-spacing="0.8" fill="#66627D">CODEBASE DNA (32 REPOS)</text>
+    <rect x="632" y="70" width="182" height="8" rx="4" fill="#E8E4DC"/>
+    <g clip-path="url(#bar_clip_light)">
+      <rect x="632.00" y="70" width="69.84" height="8" fill="#2563EB"/><rect x="703.34" y="70" width="67.84" height="8" fill="#166549"/><rect x="772.69" y="70" width="18.16" height="8" fill="#C2590C"/><rect x="792.34" y="70" width="11.06" height="8" fill="#4F46E5"/><rect x="804.90" y="70" width="7.60" height="8" fill="#7E22CE"/>
+    </g>
+    
+        <circle cx="635" cy="98.5" r="3.5" fill="#2563EB"/>
+        <text x="646" y="102" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#17162B">PL/pgSQL</text>
+        <text x="814" y="102" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#66627D">39.2%</text>
+        
+        <circle cx="635" cy="119.5" r="3.5" fill="#166549"/>
+        <text x="646" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#17162B">Dart / Flutter</text>
+        <text x="814" y="123" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#66627D">38.1%</text>
+        
+        <circle cx="635" cy="140.5" r="3.5" fill="#C2590C"/>
+        <text x="646" y="144" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#17162B">HTML / UI</text>
+        <text x="814" y="144" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#66627D">10.8%</text>
+        
+        <circle cx="635" cy="161.5" r="3.5" fill="#4F46E5"/>
+        <text x="646" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#17162B">JS / TS</text>
+        <text x="814" y="165" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#66627D">6.9%</text>
+        
+        <circle cx="635" cy="182.5" r="3.5" fill="#7E22CE"/>
+        <text x="646" y="186" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#17162B">Python &amp; Other</text>
+        <text x="814" y="186" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#66627D">5.0%</text>
+        
+  </g>
+
+  <rect x="0.5" y="0.5" width="839" height="215" rx="14" fill="none" stroke="#DDD8CE" stroke-width="1"/>
+</svg>

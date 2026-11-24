@@ -1,7 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="142" height="38" viewBox="0 0 142 38" role="img" aria-label="Email Me">
-  <rect x="0.5" y="0.5" width="141" height="37" rx="10" fill="#FBFAF7" stroke="#DCD7CD" stroke-width="1"/>
-  <g transform="translate(30.2, 11)" fill="none" stroke="#4F46E5" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="1" y="3" width="14" height="10" rx="2"/><path d="M1.5 4l6.5 4.5L14.5 4"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="40" viewBox="0 0 148 40" role="img" aria-label="Email Me">
+  <defs>
+    
+    <linearGradient id="btn_btn-email_light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDFCFA"/>
+      <stop offset="100%" stop-color="#F4F1EA"/>
+    </linearGradient>
+    <clipPath id="btn_clip_btn-email_light">
+      <rect x="0.5" y="0.5" width="147" height="39" rx="10"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#btn_clip_btn-email_light)">
+    <rect width="148" height="40" fill="url(#btn_btn-email_light)"/>
+    <line x1="12" y1="1.5" x2="136" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.80" stroke-width="1"/>
+    
+    <g transform="translate(31.4, 11.5) scale(0.71)" fill="none" stroke="#4338CA" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.2 6.2l7.6 5.4a2 2 0 0 0 2.4 0l7.6-5.4"/></g>
+    <text x="56.4" y="24.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#17162B">Email Me</text>
   </g>
-  <text x="54.2" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1B1A30">Email Me</text>
+  <rect x="0.5" y="0.5" width="147" height="39" rx="10" fill="none" stroke="#DDD8CE" stroke-width="1"/>
 </svg>
