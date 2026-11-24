@@ -486,11 +486,11 @@ def build_action_button(filename, label, icon_markup, icon_mode="stroke", varian
 
 
 # ---------------------------------------------------------------------------
-# 3. HYBRID EXECUTIVE DASHBOARD (840 x 264)
-#    Real 60-Day Velocity Curve + Executive KPIs + Codebase DNA + 2026 Delivery Bar
+# 3. EXECUTIVE ENGINEERING SNAPSHOT (840 x 216)
+#    2026 Product Delivery (Q1->Q4) + 4 Executive KPIs + Real Codebase DNA
 # ---------------------------------------------------------------------------
 def build_telemetry(metrics, mode="dark"):
-    W, H = 840, 264
+    W, H = 840, 216
     if mode == "dark":
         bg1, bg2 = "#0F131E", "#141928"
         border = "#232B42"
@@ -498,18 +498,13 @@ def build_telemetry(metrics, mode="dark"):
         accent = "#818CF8"
         ink = "#F8FAFC"
         muted = "#8B95B0"
-        grid_line = "#1E2538"
         divider = "#20273C"
-        curve_stroke = "#818CF8"
-        curve_fill_top = "#6366F1"
         dot_live = "#34D399"
         bar_bg = "#1B2236"
-        tag_bg = "#161E31"
         q_bg = "#151C2E"
         q_border = "#25304D"
         q_active_bg = "#122620"
         q_active_border = "#1E5240"
-        strip_bg = "#0C101A"
     else:
         bg1, bg2 = "#FFFFFF", "#F8FAFC"
         border = "#E2E8F0"
@@ -517,73 +512,53 @@ def build_telemetry(metrics, mode="dark"):
         accent = "#4F46E5"
         ink = "#0F172A"
         muted = "#64748B"
-        grid_line = "#EDF2F7"
         divider = "#E2E8F0"
-        curve_stroke = "#4F46E5"
-        curve_fill_top = "#4F46E5"
         dot_live = "#059669"
         bar_bg = "#E2E8F0"
-        tag_bg = "#EEF2FF"
-        q_bg = "#FFFFFF"
+        q_bg = "#F8FAFC"
         q_border = "#CBD5E1"
         q_active_bg = "#ECFDF5"
         q_active_border = "#A7F3D0"
-        strip_bg = "#F8FAFC"
 
-    # Zone A: Real Monthly Cumulative Delivery Curve (20-day real trajectory grouped in 10 smooth points)
-    raw_daily = metrics["daily_values"]
-    # Group into 10 clean 2-day buckets and compute smooth real cumulative progress
-    buckets = []
-    for i in range(0, len(raw_daily), 2):
-        buckets.append(sum(raw_daily[i:i + 2]))
-    cum_vals = []
-    running = 0
-    for v in buckets:
-        running += max(v, 0)
-        cum_vals.append(running)
-    # Mild square-root curve smoothing so early steady weeks and recent surge both read cleanly upward
-    scaled = [math.pow(max(v, 1), 0.72) for v in cum_vals]
-    max_s = max(scaled) or 1.0
-    min_s = min(scaled) * 0.75
+    # Zone A: 2026 Product Delivery Milestones (Q1 -> Q4, x=26..372)
+    milestones = [
+        ("Q1", "Indoor Navigation & Mobile Core", False),
+        ("Q2", "Vertical Sector Platforms & UI", False),
+        ("Q3", "Qodra OS Single-DB ERP Engine", False),
+        ("Q4", "Awni AI Agents & Multi-Branch", True),
+    ]
+    ms_svgs = [
+        f'<text x="26" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">2026 PRODUCT DELIVERY</text>',
+        f'<line x1="44" y1="84" x2="44" y2="184" stroke="{divider}" stroke-width="1.5"/>',
+    ]
+    for idx, (q, desc, is_active) in enumerate(milestones):
+        my = 84 + idx * 32
+        bg = q_active_bg if is_active else q_bg
+        bd = q_active_border if is_active else q_border
+        q_col = dot_live if is_active else accent
+        txt_col = ink if is_active else muted
+        fw = "600" if is_active else "500"
+        pulse = f'<circle cx="356" cy="{my + 1}" r="3.8" fill="{dot_live}" class="peak-halo"/>' if is_active else ""
+        live_dot = f'<circle cx="356" cy="{my + 1}" r="3.2" fill="{dot_live}"/>' if is_active else ""
+        ms_svgs.append(f"""
+        <rect x="26" y="{my - 11}" width="36" height="24" rx="6" fill="{bg}" stroke="{bd}" stroke-width="1"/>
+        <text x="44" y="{my + 4.5}" text-anchor="middle" font-family="{FONT_MONO}" font-size="10.5" font-weight="700" fill="{q_col}">{escape(q)}</text>
+        <text x="74" y="{my + 4.5}" font-family="{FONT_SANS}" font-size="12.2" font-weight="{fw}" fill="{txt_col}">{escape(desc)}</text>
+        {pulse}{live_dot}
+        """)
 
-    x_start, x_end = 30.0, 356.0
-    y_top, y_bot = 82.0, 174.0
-    step_x = (x_end - x_start) / max(len(scaled) - 1, 1)
-
-    pts = []
-    for i, sv in enumerate(scaled):
-        norm = (sv - min_s) / max(max_s - min_s, 1e-6)
-        x = x_start + i * step_x
-        y = y_bot - norm * (y_bot - y_top)
-        pts.append((x, y))
-
-    curve_d = smooth_curve_path(pts)
-    area_d = f"{curve_d} L {pts[-1][0]:.2f} {y_bot:.2f} L {pts[0][0]:.2f} {y_bot:.2f} Z"
-    last_x, last_y = pts[-1]
-
-    # Clean monthly week markers (W1 -> W4) without noisy day-count labels
-    x_ticks = []
-    week_labels = ["W1", "W2", "W3", "W4"]
-    for idx, wl in enumerate(week_labels):
-        mx = x_start + idx * ((x_end - x_start) / 3.0)
-        col = accent if idx == 3 else muted
-        fw = "700" if idx == 3 else "500"
-        x_ticks.append(
-            f'<text x="{mx:.1f}" y="192" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.8" font-weight="{fw}" fill="{col}">{wl}</text>'
-        )
-
-    # Zone B: 2x2 Executive KPI Grid (including verified real Pull Requests!)
+    # Zone B: 2x2 Executive KPI Grid (25+ Modules · 9+ Industry Sectors · Repos · Building Since)
     kpis = [
-        (metrics["pull_requests"], "PULL REQUESTS", 398, 98, accent),
-        ("12", "QODRA OS MODULES", 502, 98, dot_live),
-        (metrics["total_repos"], "REPOSITORIES", 398, 168, ink),
-        (metrics["building_since"], "BUILDING SINCE", 502, 168, ink),
+        ("25+", "QODRA OS MODULES", 392, 96, accent),
+        ("9+", "INDUSTRY SECTORS", 512, 96, dot_live),
+        (metrics["total_repos"], "REPOSITORIES", 392, 166, ink),
+        (metrics["building_since"], "BUILDING SINCE", 512, 166, ink),
     ]
     kpi_svgs = []
     for val, lbl, kx, ky, col in kpis:
         kpi_svgs.append(f"""
         <text x="{kx}" y="{ky}" font-family="{FONT_MONO}" font-size="22" font-weight="700" letter-spacing="-0.5" fill="{col}">{escape(val)}</text>
-        <text x="{kx}" y="{ky + 17}" font-family="{FONT_MONO}" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(lbl)}</text>
+        <text x="{kx}" y="{ky + 17}" font-family="{FONT_MONO}" font-size="9.0" font-weight="600" letter-spacing="0.3" fill="{muted}">{escape(lbl)}</text>
         """)
 
     # Zone C: Real Language Footprint Bar + 5 Legend Rows
@@ -610,38 +585,11 @@ def build_telemetry(metrics, mode="dark"):
         <text x="814" y="{ly}" text-anchor="end" font-family="{FONT_MONO}" font-size="11.2" font-weight="600" fill="{muted}">{l['pct']:.1f}%</text>
         """)
 
-    # Bottom Integrated 2026 Quarterly Delivery Strip (Q1 -> Q4 across full width!)
-    quarters = [
-        ("Q1", "Indoor Nav & Mobile", False),
-        ("Q2", "Sector Platforms", False),
-        ("Q3", "Qodra OS ERP Core", False),
-        ("Q4", "Awni AI & Scale", True),
-    ]
-    q_svgs = []
-    qw = 186
-    qg = 16
-    qx0 = 24
-    qy = 216
-    for idx, (q, desc, is_active) in enumerate(quarters):
-        qx = qx0 + idx * (qw + qg)
-        bg = q_active_bg if is_active else q_bg
-        bd = q_active_border if is_active else q_border
-        q_col = dot_live if is_active else accent
-        txt_col = ink if is_active else muted
-        fw = "600" if is_active else "500"
-        if idx > 0:
-            q_svgs.append(f'<line x1="{qx - qg + 2}" y1="{qy + 16}" x2="{qx - 2}" y2="{qy + 16}" stroke="{divider}" stroke-width="1.5"/>')
-        q_svgs.append(f"""
-        <rect x="{qx}" y="{qy}" width="{qw}" height="32" rx="8" fill="{bg}" stroke="{bd}" stroke-width="1"/>
-        <text x="{qx + 14}" y="{qy + 20}" font-family="{FONT_MONO}" font-size="10.5" font-weight="700" fill="{q_col}">{escape(q)}</text>
-        <text x="{qx + 38}" y="{qy + 20}" font-family="{FONT_SANS}" font-size="11.8" font-weight="{fw}" fill="{txt_col}">{escape(desc)}</text>
-        """)
-
     freshness = f"QODRA SYSTEMS · {metrics['updated_label']}"
     dot_x = 814 - len(freshness) * 6.5 - 12
     dna_title = f"CODEBASE DNA ({metrics['total_repos']} REPOS)"
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Executive Engineering Snapshot — 60-Day Velocity, 2026 Delivery and Codebase DNA">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Executive Engineering Snapshot — 2026 Delivery, Qodra OS Scale and Codebase DNA">
   <defs>
     <style>
       .peak-halo {{
@@ -660,10 +608,6 @@ def build_telemetry(metrics, mode="dark"):
       <stop offset="0%" stop-color="{bg1}"/>
       <stop offset="100%" stop-color="{bg2}"/>
     </linearGradient>
-    <linearGradient id="tarea_{mode}" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="{curve_fill_top}" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="{curve_fill_top}" stop-opacity="0.01"/>
-    </linearGradient>
     <clipPath id="tclip_{mode}">
       <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14"/>
     </clipPath>
@@ -677,33 +621,21 @@ def build_telemetry(metrics, mode="dark"):
     <line x1="20" y1="1.5" x2="{W-20}" y2="1.5" stroke="#FFFFFF" stroke-opacity="{sheen_op}" stroke-width="1"/>
 
     <!-- Header Strip -->
-    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING SNAPSHOT  ·  VELOCITY &amp; 2026 DELIVERY</text>
+    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING SNAPSHOT  ·  ARCHITECTURE &amp; DELIVERY</text>
     <circle cx="{dot_x:.1f}" cy="26.5" r="3.2" fill="{dot_live}"/>
     <text x="814" y="30" text-anchor="end" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(freshness)}</text>
     <line x1="24" y1="44" x2="{W-24}" y2="44" stroke="{divider}" stroke-width="1"/>
 
-    <!-- Zone A: Real Monthly Delivery Momentum Curve -->
-    <text x="26" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">DELIVERY MOMENTUM</text>
-    <rect x="278" y="50" width="80" height="19" rx="5" fill="{tag_bg}"/>
-    <text x="318" y="62.8" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.2" font-weight="600" fill="{accent}">{escape(metrics['updated_label'])}</text>
-
-    <line x1="26" y1="82" x2="360" y2="82" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
-    <line x1="26" y1="128" x2="360" y2="128" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
-    <line x1="26" y1="174" x2="360" y2="174" stroke="{grid_line}" stroke-width="1"/>
-
-    <path d="{area_d}" fill="url(#tarea_{mode})"/>
-    <path d="{curve_d}" fill="none" stroke="{curve_stroke}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="4.5" fill="{dot_live}" class="peak-halo"/>
-    <circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="4" fill="{dot_live}" stroke="{bg1}" stroke-width="1.5"/>
-    {''.join(x_ticks)}
+    <!-- Zone A: 2026 Delivery Roadmap -->
+    {''.join(ms_svgs)}
 
     <!-- Dividers -->
-    <line x1="382" y1="54" x2="382" y2="196" stroke="{divider}" stroke-width="1"/>
-    <line x1="616" y1="54" x2="616" y2="196" stroke="{divider}" stroke-width="1"/>
+    <line x1="378" y1="56" x2="378" y2="196" stroke="{divider}" stroke-width="1"/>
+    <line x1="620" y1="56" x2="620" y2="196" stroke="{divider}" stroke-width="1"/>
 
     <!-- Zone B: 2x2 KPIs -->
-    <line x1="396" y1="130" x2="602" y2="130" stroke="{divider}" stroke-width="1"/>
-    <line x1="490" y1="62" x2="490" y2="190" stroke="{divider}" stroke-width="1"/>
+    <line x1="390" y1="128" x2="608" y2="128" stroke="{divider}" stroke-width="1"/>
+    <line x1="500" y1="62" x2="500" y2="190" stroke="{divider}" stroke-width="1"/>
     {''.join(kpi_svgs)}
 
     <!-- Zone C: Codebase DNA -->
@@ -713,11 +645,6 @@ def build_telemetry(metrics, mode="dark"):
       {''.join(seg_svgs)}
     </g>
     {''.join(legend_svgs)}
-
-    <!-- Bottom 2026 Delivery Roadmap Strip -->
-    <rect x="0" y="204" width="{W}" height="60" fill="{strip_bg}"/>
-    <line x1="24" y1="204" x2="{W-24}" y2="204" stroke="{divider}" stroke-width="1"/>
-    {''.join(q_svgs)}
   </g>
 
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{border}" stroke-width="1"/>

@@ -32,15 +32,15 @@
 | **[Qodra OS](https://qodrasystems.com/en/systems/erp.html)** | Single-database `PL/pgSQL` ERP core — accounting, POS, multi-branch inventory, HR/payroll & MENA e-invoicing synchronized in real time |
 | **[Awni AI Agents](https://qodrasystems.com/en/systems/ai.html)** | Role-scoped Arabic & voice AI agents executing operational workflows inside company systems with audit trails & human approval |
 | **[Indoor Navigation](https://qodrasystems.com/en/systems/navigation.html)** | GPS-free cross-floor wayfinding, live venue heatmaps & high-throughput `Flutter` / web operational platforms |
-| **[Qodra Systems](https://github.com/qodrasystems)** | Full 12-module enterprise suite, industry verticals & company engineering hub at **[`@qodrasystems`](https://github.com/qodrasystems)** |
+| **[Qodra Systems](https://github.com/qodrasystems)** | Full 25+ module enterprise suite, industry verticals & company engineering hub at **[`@qodrasystems`](https://github.com/qodrasystems)** |
 
 ---
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=6">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=6">
-    <img alt="Executive Engineering Snapshot — Delivery Momentum, Pull Requests, 2026 Roadmap & Codebase DNA" src="./assets/telemetry-dark.svg?v=6" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=7">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=7">
+    <img alt="Executive Engineering Snapshot — 2026 Delivery, 25+ Qodra OS Modules, 9+ Industry Sectors & Codebase DNA" src="./assets/telemetry-dark.svg?v=7" width="100%">
   </picture>
 </p>
 
