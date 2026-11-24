@@ -38,9 +38,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=5">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=5">
-    <img alt="Executive Engineering Snapshot — 60-Day Velocity, 2026 Delivery Milestones & Codebase DNA" src="./assets/telemetry-dark.svg?v=5" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=6">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=6">
+    <img alt="Executive Engineering Snapshot — Delivery Momentum, Pull Requests, 2026 Roadmap & Codebase DNA" src="./assets/telemetry-dark.svg?v=6" width="100%">
   </picture>
 </p>
 

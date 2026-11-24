@@ -34,25 +34,25 @@
     <line x1="20" y1="1.5" x2="820" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.90" stroke-width="1"/>
 
     <!-- Header Strip -->
-    <text x="26" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.0" fill="#4F46E5">ENGINEERING SNAPSHOT  ·  60-DAY VELOCITY &amp; 2026 DELIVERY</text>
+    <text x="26" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.0" fill="#4F46E5">ENGINEERING SNAPSHOT  ·  VELOCITY &amp; 2026 DELIVERY</text>
     <circle cx="646.0" cy="26.5" r="3.2" fill="#059669"/>
     <text x="814" y="30" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.4" fill="#64748B">QODRA SYSTEMS · NOV 2026</text>
     <line x1="24" y1="44" x2="816" y2="44" stroke="#E2E8F0" stroke-width="1"/>
 
-    <!-- Zone A: Real 60-Day Velocity Curve -->
-    <text x="26" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="#64748B">LAST 60 DAYS MOMENTUM</text>
-    <rect x="274" y="50" width="84" height="19" rx="5" fill="#EEF2FF"/>
-    <text x="316" y="62.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" fill="#4F46E5">OCT – NOV</text>
+    <!-- Zone A: Real Monthly Delivery Momentum Curve -->
+    <text x="26" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="#64748B">DELIVERY MOMENTUM</text>
+    <rect x="278" y="50" width="80" height="19" rx="5" fill="#EEF2FF"/>
+    <text x="318" y="62.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" fill="#4F46E5">NOV 2026</text>
 
     <line x1="26" y1="82" x2="360" y2="82" stroke="#EDF2F7" stroke-width="1" stroke-dasharray="2 4"/>
     <line x1="26" y1="128" x2="360" y2="128" stroke="#EDF2F7" stroke-width="1" stroke-dasharray="2 4"/>
     <line x1="26" y1="174" x2="360" y2="174" stroke="#EDF2F7" stroke-width="1"/>
 
-    <path d="M 30.00 170.26 C 36.79 169.45, 57.17 167.02, 70.75 165.44 C 84.33 163.85, 97.92 161.66, 111.50 160.73 C 125.08 159.81, 138.67 160.78, 152.25 159.88 C 165.83 158.98, 179.42 156.58, 193.00 155.33 C 206.58 154.08, 220.17 153.60, 233.75 152.37 C 247.33 151.15, 260.92 157.37, 274.50 147.96 C 288.08 137.87, 301.67 102.86, 315.25 91.87 C 328.83 80.88, 349.21 83.64, 356.00 82.00 L 356.00 174.00 L 30.00 174.00 Z" fill="url(#tarea_light)"/>
-    <path d="M 30.00 170.26 C 36.79 169.45, 57.17 167.02, 70.75 165.44 C 84.33 163.85, 97.92 161.66, 111.50 160.73 C 125.08 159.81, 138.67 160.78, 152.25 159.88 C 165.83 158.98, 179.42 156.58, 193.00 155.33 C 206.58 154.08, 220.17 153.60, 233.75 152.37 C 247.33 151.15, 260.92 157.37, 274.50 147.96 C 288.08 137.87, 301.67 102.86, 315.25 91.87 C 328.83 80.88, 349.21 83.64, 356.00 82.00" fill="none" stroke="#4F46E5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 30.00 172.10 C 36.04 171.47, 54.15 169.47, 66.22 168.33 C 78.30 167.19, 90.37 166.12, 102.44 165.26 C 114.52 164.40, 126.59 164.56, 138.67 163.19 C 150.74 161.81, 162.81 160.68, 174.89 157.02 C 186.96 153.37, 199.04 145.19, 211.11 141.25 C 223.19 137.30, 235.26 138.75, 247.33 133.35 C 259.41 127.96, 271.48 115.40, 283.56 108.88 C 295.63 102.36, 307.70 98.70, 319.78 94.22 C 331.85 89.74, 349.96 84.04, 356.00 82.00 L 356.00 174.00 L 30.00 174.00 Z" fill="url(#tarea_light)"/>
+    <path d="M 30.00 172.10 C 36.04 171.47, 54.15 169.47, 66.22 168.33 C 78.30 167.19, 90.37 166.12, 102.44 165.26 C 114.52 164.40, 126.59 164.56, 138.67 163.19 C 150.74 161.81, 162.81 160.68, 174.89 157.02 C 186.96 153.37, 199.04 145.19, 211.11 141.25 C 223.19 137.30, 235.26 138.75, 247.33 133.35 C 259.41 127.96, 271.48 115.40, 283.56 108.88 C 295.63 102.36, 307.70 98.70, 319.78 94.22 C 331.85 89.74, 349.96 84.04, 356.00 82.00" fill="none" stroke="#4F46E5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="356.00" cy="82.00" r="4.5" fill="#059669" class="peak-halo"/>
     <circle cx="356.00" cy="82.00" r="4" fill="#059669" stroke="#FFFFFF" stroke-width="1.5"/>
-    <text x="30.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="500" fill="#64748B">S28</text><text x="111.5" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="500" fill="#64748B">O12</text><text x="193.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="500" fill="#64748B">O26</text><text x="274.5" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="500" fill="#64748B">N09</text><text x="356.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#4F46E5">N23</text>
+    <text x="30.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="500" fill="#64748B">W1</text><text x="138.7" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="500" fill="#64748B">W2</text><text x="247.3" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="500" fill="#64748B">W3</text><text x="356.0" y="192" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="700" fill="#4F46E5">W4</text>
 
     <!-- Dividers -->
     <line x1="382" y1="54" x2="382" y2="196" stroke="#E2E8F0" stroke-width="1"/>
@@ -62,14 +62,14 @@
     <line x1="396" y1="130" x2="602" y2="130" stroke="#E2E8F0" stroke-width="1"/>
     <line x1="490" y1="62" x2="490" y2="190" stroke="#E2E8F0" stroke-width="1"/>
     
-        <text x="400" y="98" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#4F46E5">4</text>
-        <text x="400" y="115" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">CORE PLATFORMS</text>
+        <text x="398" y="98" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#4F46E5">609</text>
+        <text x="398" y="115" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">PULL REQUESTS</text>
         
         <text x="502" y="98" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#059669">12</text>
         <text x="502" y="115" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">QODRA OS MODULES</text>
         
-        <text x="400" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#0F172A">32</text>
-        <text x="400" y="185" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">REPOSITORIES</text>
+        <text x="398" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#0F172A">32</text>
+        <text x="398" y="185" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">REPOSITORIES</text>
         
         <text x="502" y="168" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="22" font-weight="700" letter-spacing="-0.5" fill="#0F172A">2018</text>
         <text x="502" y="185" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="#64748B">BUILDING SINCE</text>

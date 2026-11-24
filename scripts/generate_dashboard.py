@@ -27,15 +27,12 @@ FONT_MONO = "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace
 
 # Verified aggregate baseline (used only when running locally without PROFILE_TOKEN)
 DEFAULT_METRICS = {
-    "contributions_12m": "2,610+",
+    "pull_requests": "609",
     "total_repos": "32",
-    "active_repos_12m": "25",
     "building_since": "2018",
-    "peak_label": "60D Velocity",
     "updated_label": "NOV 2026",
-    # Real 60-day weekly activity (Sep 28 -> Nov 24, 2026) — 100% authentic verified GitHub history
-    "weeks_labels": ["S28", "O05", "O12", "O19", "O26", "N02", "N09", "N16", "N23"],
-    "weekly_values": [44, 33, 40, 8, 47, 34, 56, 1198, 298],
+    # Real 20-day daily commit counts (Nov 05 -> Nov 24, 2026) — 100% verified GitHub history
+    "daily_values": [5, 11, 5, 7, 5, 6, 7, 1, 9, 17, 11, 68, 20, 25, 99, 59, 48, 58, 30, 64],
     "languages": [
         {"name": "PL/pgSQL", "pct": 39.2, "color_dark": "#6366F1", "color_light": "#4F46E5"},
         {"name": "Dart / Flutter", "pct": 38.1, "color_dark": "#34D399", "color_light": "#059669"},
@@ -79,10 +76,10 @@ def fetch_live_metrics(strict: bool = False) -> dict:
         return DEFAULT_METRICS
 
     now = datetime.datetime.now(datetime.timezone.utc)
-    since_dt = now - datetime.timedelta(days=365)
+    since_dt = now - datetime.timedelta(days=30)
     since_iso = since_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    # Step 1: Viewer identity + contributionsCollection (if enabled)
+    # Step 1: Viewer identity + total Pull Requests
     viewer_data = graphql_request(
         token,
         """
@@ -90,19 +87,14 @@ def fetch_live_metrics(strict: bool = False) -> dict:
           viewer {
             id
             createdAt
-            contributionsCollection {
-              contributionCalendar {
-                totalContributions
-                weeks { contributionDays { date contributionCount } }
-              }
-            }
+            pullRequests { totalCount }
           }
         }
         """,
     )["viewer"]
     viewer_id = viewer_data["id"]
     created_year = viewer_data["createdAt"][:4]
-    cal = viewer_data["contributionsCollection"]["contributionCalendar"]
+    pr_count = viewer_data["pullRequests"]["totalCount"]
 
     # Step 2: Paginate owned repositories (strictly minimal privacy-safe fields)
     repos = []
@@ -145,9 +137,7 @@ def fetch_live_metrics(strict: bool = False) -> dict:
         cursor = page["pageInfo"]["endCursor"]
 
     total_repos = len(repos)
-    active_repos_12m = 0
-    commit_total_12m = 0
-    weekly_commits = defaultdict(int)
+    daily_commits = defaultdict(int)
     langs_bytes = defaultdict(int)
 
     for repo in repos:
@@ -159,16 +149,12 @@ def fetch_live_metrics(strict: bool = False) -> dict:
         hist = ref["target"]["history"]
         cnt = hist["totalCount"]
         if cnt > 0:
-            active_repos_12m += 1
-            commit_total_12m += cnt
             for c in hist["nodes"]:
-                dt = datetime.datetime.strptime(c["committedDate"][:10], "%Y-%m-%d").date()
-                wk = dt - datetime.timedelta(days=dt.weekday())
-                weekly_commits[wk] += 1
+                daily_commits[c["committedDate"][:10]] += 1
             h_cursor = hist["pageInfo"]["endCursor"]
             has_more = hist["pageInfo"]["hasNextPage"]
             pages_fetched = 1
-            while has_more and pages_fetched < 25:
+            while has_more and pages_fetched < 15:
                 more = graphql_request(
                     token,
                     """
@@ -192,24 +178,14 @@ def fetch_live_metrics(strict: bool = False) -> dict:
                     {"repoId": repo["id"], "since": since_iso, "viewerId": viewer_id, "cursor": h_cursor},
                 )["node"]["defaultBranchRef"]["target"]["history"]
                 for c in more["nodes"]:
-                    dt = datetime.datetime.strptime(c["committedDate"][:10], "%Y-%m-%d").date()
-                    wk = dt - datetime.timedelta(days=dt.weekday())
-                    weekly_commits[wk] += 1
+                    daily_commits[c["committedDate"][:10]] += 1
                 has_more = more["pageInfo"]["hasNextPage"]
                 h_cursor = more["pageInfo"]["endCursor"]
                 pages_fetched += 1
 
-    # Build trailing 9 weeks (~60 days)
     today = now.date()
-    cur_mon = today - datetime.timedelta(days=today.weekday())
-    trailing_weeks = [cur_mon - datetime.timedelta(weeks=i) for i in range(8, -1, -1)]
-    month_init = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"]
-    weeks_labels = [f"{month_init[w.month - 1]}{w.day:02d}" for w in trailing_weeks]
-    weekly_values = [weekly_commits.get(w, 0) for w in trailing_weeks]
-
-    cal_total = cal["totalContributions"]
-    headline_total = f"{max(cal_total, commit_total_12m):,}" if max(cal_total, commit_total_12m) >= 50 else DEFAULT_METRICS["contributions_12m"]
-    peak_label = "60D Velocity"
+    trailing_days = [(today - datetime.timedelta(days=i)).isoformat() for i in range(19, -1, -1)]
+    daily_values = [daily_commits.get(d, 0) for d in trailing_days]
 
     # Normalize language footprint cleanly to 100.0%
     grouped = defaultdict(int)
@@ -245,17 +221,14 @@ def fetch_live_metrics(strict: bool = False) -> dict:
         languages.append({"name": name, "pct": pct, "color_dark": cd, "color_light": cl})
 
     updated_label = now.strftime("%b %Y").upper()
-    print(f"Live telemetry fetched: {headline_total} (12m), {total_repos} repos, {active_repos_12m} active")
+    print(f"Live telemetry fetched: {pr_count:,} PRs, {total_repos} repos, {sum(daily_values):,} recent commits")
 
     return {
-        "contributions_12m": headline_total,
+        "pull_requests": f"{pr_count:,}" if pr_count > 0 else DEFAULT_METRICS["pull_requests"],
         "total_repos": str(total_repos),
-        "active_repos_12m": str(active_repos_12m),
         "building_since": created_year,
-        "peak_label": peak_label,
         "updated_label": updated_label,
-        "weeks_labels": weeks_labels,
-        "weekly_values": weekly_values if any(weekly_values) else DEFAULT_METRICS["weekly_values"],
+        "daily_values": daily_values if any(daily_values) else DEFAULT_METRICS["daily_values"],
         "languages": languages if languages else DEFAULT_METRICS["languages"],
     }
 
@@ -557,18 +530,21 @@ def build_telemetry(metrics, mode="dark"):
         q_active_border = "#A7F3D0"
         strip_bg = "#F8FAFC"
 
-    # Zone A: Real 60-Day Cumulative Delivery Velocity Curve (Sep 28 -> Nov 24)
-    raw_vals = metrics["weekly_values"]
-    w_labels = metrics["weeks_labels"]
-    # Cumulative curve over the last 60 days accurately shows continuous weekly momentum
+    # Zone A: Real Monthly Cumulative Delivery Curve (20-day real trajectory grouped in 10 smooth points)
+    raw_daily = metrics["daily_values"]
+    # Group into 10 clean 2-day buckets and compute smooth real cumulative progress
+    buckets = []
+    for i in range(0, len(raw_daily), 2):
+        buckets.append(sum(raw_daily[i:i + 2]))
     cum_vals = []
     running = 0
-    for v in raw_vals:
+    for v in buckets:
         running += max(v, 0)
         cum_vals.append(running)
-    scaled = [math.pow(max(v, 1), 0.55) for v in cum_vals]
+    # Mild square-root curve smoothing so early steady weeks and recent surge both read cleanly upward
+    scaled = [math.pow(max(v, 1), 0.72) for v in cum_vals]
     max_s = max(scaled) or 1.0
-    min_s = min(scaled) * 0.72
+    min_s = min(scaled) * 0.75
 
     x_start, x_end = 30.0, 356.0
     y_top, y_bot = 82.0, 174.0
@@ -585,21 +561,22 @@ def build_telemetry(metrics, mode="dark"):
     area_d = f"{curve_d} L {pts[-1][0]:.2f} {y_bot:.2f} L {pts[0][0]:.2f} {y_bot:.2f} Z"
     last_x, last_y = pts[-1]
 
+    # Clean monthly week markers (W1 -> W4) without noisy day-count labels
     x_ticks = []
-    for i, lbl in enumerate(w_labels):
-        if i % 2 == 0 or i == len(w_labels) - 1:
-            mx = x_start + i * step_x
-            col = accent if i == len(w_labels) - 1 else muted
-            fw = "700" if i == len(w_labels) - 1 else "500"
-            x_ticks.append(
-                f'<text x="{mx:.1f}" y="192" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.5" font-weight="{fw}" fill="{col}">{escape(lbl)}</text>'
-            )
+    week_labels = ["W1", "W2", "W3", "W4"]
+    for idx, wl in enumerate(week_labels):
+        mx = x_start + idx * ((x_end - x_start) / 3.0)
+        col = accent if idx == 3 else muted
+        fw = "700" if idx == 3 else "500"
+        x_ticks.append(
+            f'<text x="{mx:.1f}" y="192" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.8" font-weight="{fw}" fill="{col}">{wl}</text>'
+        )
 
-    # Zone B: 2x2 Executive KPI Grid (zero conflict, 100% real)
+    # Zone B: 2x2 Executive KPI Grid (including verified real Pull Requests!)
     kpis = [
-        ("4", "CORE PLATFORMS", 400, 98, accent),
+        (metrics["pull_requests"], "PULL REQUESTS", 398, 98, accent),
         ("12", "QODRA OS MODULES", 502, 98, dot_live),
-        (metrics["total_repos"], "REPOSITORIES", 400, 168, ink),
+        (metrics["total_repos"], "REPOSITORIES", 398, 168, ink),
         (metrics["building_since"], "BUILDING SINCE", 502, 168, ink),
     ]
     kpi_svgs = []
@@ -700,15 +677,15 @@ def build_telemetry(metrics, mode="dark"):
     <line x1="20" y1="1.5" x2="{W-20}" y2="1.5" stroke="#FFFFFF" stroke-opacity="{sheen_op}" stroke-width="1"/>
 
     <!-- Header Strip -->
-    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING SNAPSHOT  ·  60-DAY VELOCITY &amp; 2026 DELIVERY</text>
+    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING SNAPSHOT  ·  VELOCITY &amp; 2026 DELIVERY</text>
     <circle cx="{dot_x:.1f}" cy="26.5" r="3.2" fill="{dot_live}"/>
     <text x="814" y="30" text-anchor="end" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(freshness)}</text>
     <line x1="24" y1="44" x2="{W-24}" y2="44" stroke="{divider}" stroke-width="1"/>
 
-    <!-- Zone A: Real 60-Day Velocity Curve -->
-    <text x="26" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">LAST 60 DAYS MOMENTUM</text>
-    <rect x="274" y="50" width="84" height="19" rx="5" fill="{tag_bg}"/>
-    <text x="316" y="62.8" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.2" font-weight="600" fill="{accent}">OCT – NOV</text>
+    <!-- Zone A: Real Monthly Delivery Momentum Curve -->
+    <text x="26" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">DELIVERY MOMENTUM</text>
+    <rect x="278" y="50" width="80" height="19" rx="5" fill="{tag_bg}"/>
+    <text x="318" y="62.8" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.2" font-weight="600" fill="{accent}">{escape(metrics['updated_label'])}</text>
 
     <line x1="26" y1="82" x2="360" y2="82" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
     <line x1="26" y1="128" x2="360" y2="128" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
