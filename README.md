@@ -11,10 +11,10 @@
 <br>
 
 <p align="center">
-  <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-card-dark.svg?v=2"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-card-light.svg?v=2"><img alt="Digital Business Card" src="./assets/btn-card-dark.svg?v=2" height="40"></picture></a>&nbsp;
-  <a href="https://qodrasystems.com/en/" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-web-dark.svg?v=2"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-web-light.svg?v=2"><img alt="Qodra Systems Website" src="./assets/btn-web-dark.svg?v=2" height="40"></picture></a>&nbsp;
-  <a href="mailto:a.ayyash@qodrasystems.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-email-dark.svg?v=2"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg?v=2"><img alt="Email Abd-Alrahman Ayyash" src="./assets/btn-email-dark.svg?v=2" height="40"></picture></a>&nbsp;
-  <a href="https://wa.me/962787679639" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-whatsapp-dark.svg?v=2"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-whatsapp-light.svg?v=2"><img alt="WhatsApp" src="./assets/btn-whatsapp-dark.svg?v=2" height="40"></picture></a>
+  <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-card-dark.svg?v=3"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-card-light.svg?v=3"><img alt="Digital Business Card" src="./assets/btn-card-dark.svg?v=3" height="40"></picture></a>&nbsp;
+  <a href="https://qodrasystems.com/en/" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-web-dark.svg?v=3"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-web-light.svg?v=3"><img alt="Qodra Systems Website" src="./assets/btn-web-dark.svg?v=3" height="40"></picture></a>&nbsp;
+  <a href="mailto:a.ayyash@qodrasystems.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-email-dark.svg?v=3"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg?v=3"><img alt="Email Abd-Alrahman Ayyash" src="./assets/btn-email-dark.svg?v=3" height="40"></picture></a>&nbsp;
+  <a href="https://wa.me/962787679639" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-whatsapp-dark.svg?v=3"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-whatsapp-light.svg?v=3"><img alt="WhatsApp" src="./assets/btn-whatsapp-dark.svg?v=3" height="40"></picture></a>
 </p>
 
 <picture>

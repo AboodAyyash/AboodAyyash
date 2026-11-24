@@ -5,13 +5,18 @@
       <stop offset="0%" stop-color="#FDFCFA"/>
       <stop offset="100%" stop-color="#F4F1EA"/>
     </linearGradient>
+    <linearGradient id="btn_sheen_btn-web_light" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.80"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
     <clipPath id="btn_clip_btn-web_light">
       <rect x="0.5" y="0.5" width="195" height="39" rx="10"/>
     </clipPath>
   </defs>
   <g clip-path="url(#btn_clip_btn-web_light)">
     <rect width="196" height="40" fill="url(#btn_btn-web_light)"/>
-    <line x1="12" y1="1.5" x2="184" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.80" stroke-width="1"/>
+    <rect x="0" y="1" width="196" height="1" fill="url(#btn_sheen_btn-web_light)"/>
     
     <g transform="translate(25.8, 11.5) scale(0.71)" fill="none" stroke="#4338CA" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19"/><path d="M12 2.5a14.5 14.5 0 0 1 0 19 14.5 14.5 0 0 1 0-19Z"/></g>
     <text x="50.8" y="24.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#17162B">qodrasystems.com</text>
