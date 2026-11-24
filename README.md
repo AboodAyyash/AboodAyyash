@@ -39,6 +39,16 @@
   <a href="https://qodrasystems.com/en/services.html" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/card-custom-dark.svg?v=2"><source media="(prefers-color-scheme: light)" srcset="./assets/card-custom-light.svg?v=2"><img alt="Custom Systems and Apps" src="./assets/card-custom-dark.svg?v=2" width="49.2%"></picture></a>
 </p>
 
+<p align="center">
+  <a href="https://qodrasystems.com/en/systems.html" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/qodra-suite-dark.svg?v=1">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/qodra-suite-light.svg?v=1">
+      <img alt="Qodra OS Complete 12-Module Enterprise Suite — ERP, POS, Inventory, Purchasing, HR, CRM, AI Agents, Indoor Navigation & Sector Systems" src="./assets/qodra-suite-dark.svg?v=1" width="100%">
+    </picture>
+  </a>
+</p>
+
 ---
 
 <p align="center">
@@ -49,13 +59,17 @@
   </picture>
 </p>
 
-<div align="center">
+<p align="center" dir="rtl">
+  <sub><strong>عبدالرحمن عياش</strong> · المدير التنفيذي — <strong>شركة قدرة للأنظمة</strong> · عمّان، الأردن</sub>
+</p>
+
+<p align="center" dir="ltr">
   <sub>
-    <strong>عبدالرحمن عياش</strong> · المدير التنفيذي — <strong>شركة قدرة للأنظمة</strong> · عمّان، الأردن
-    <br><br>
-    <a href="https://qodrasystems.com/card/a.ayyash">البطاقة الرقمية (عربي)</a>
+    <a href="https://github.com/qodrasystems"><strong>@qodrasystems</strong></a>
     &nbsp;·&nbsp;
     <a href="https://qodrasystems.com/en/card/a.ayyash">Digital Card (EN)</a>
+    &nbsp;·&nbsp;
+    <a href="https://qodrasystems.com/card/a.ayyash">Digital Card (AR)</a>
     &nbsp;·&nbsp;
     <a href="https://qodrasystems.com/en/systems.html">Systems &amp; Services</a>
     &nbsp;·&nbsp;
@@ -65,4 +79,4 @@
     &nbsp;·&nbsp;
     <a href="https://www.facebook.com/profile.php?id=61595853512325">Facebook</a>
   </sub>
-</div>
+</p>
