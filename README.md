@@ -11,10 +11,11 @@
 <br>
 
 <p align="center">
-  <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-card-dark.svg?v=4"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-card-light.svg?v=4"><img alt="Digital Business Card" src="./assets/btn-card-dark.svg?v=4" height="38"></picture></a>&nbsp;
-  <a href="https://github.com/qodrasystems"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-org-dark.svg?v=4"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-org-light.svg?v=4"><img alt="Qodra Systems Organization" src="./assets/btn-org-dark.svg?v=4" height="38"></picture></a>&nbsp;
-  <a href="mailto:a.ayyash@qodrasystems.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-email-dark.svg?v=4"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg?v=4"><img alt="Email Abd-Alrahman Ayyash" src="./assets/btn-email-dark.svg?v=4" height="38"></picture></a>&nbsp;
-  <a href="https://wa.me/962787679639" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-whatsapp-dark.svg?v=4"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-whatsapp-light.svg?v=4"><img alt="WhatsApp" src="./assets/btn-whatsapp-dark.svg?v=4" height="38"></picture></a>
+  <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-card-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-card-light.svg?v=5"><img alt="Digital Business Card" src="./assets/btn-card-dark.svg?v=5" height="38"></picture></a>&nbsp;
+  <a href="https://www.linkedin.com/in/abdalrahman-ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-linkedin-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-linkedin-light.svg?v=5"><img alt="LinkedIn — Abd-Alrahman Ayyash" src="./assets/btn-linkedin-dark.svg?v=5" height="38"></picture></a>&nbsp;
+  <a href="https://github.com/qodrasystems"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-org-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-org-light.svg?v=5"><img alt="Qodra Systems Organization" src="./assets/btn-org-dark.svg?v=5" height="38"></picture></a>&nbsp;
+  <a href="mailto:a.ayyash@qodrasystems.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-email-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg?v=5"><img alt="Email Abd-Alrahman Ayyash" src="./assets/btn-email-dark.svg?v=5" height="38"></picture></a>&nbsp;
+  <a href="https://wa.me/962787679639" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-whatsapp-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-whatsapp-light.svg?v=5"><img alt="WhatsApp" src="./assets/btn-whatsapp-dark.svg?v=5" height="38"></picture></a>
 </p>
 
 </div>
@@ -57,6 +58,8 @@ I'm **Abd-Alrahman Ayyash** — Founder, CEO, and hands-on Systems Architect at 
 <p align="center" dir="ltr">
   <sub>
     <a href="https://github.com/qodrasystems"><strong>@qodrasystems</strong></a>
+    &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/abdalrahman-ayyash">LinkedIn</a>
     &nbsp;·&nbsp;
     <a href="https://qodrasystems.com/en/card/a.ayyash">Digital Card (EN)</a>
     &nbsp;·&nbsp;

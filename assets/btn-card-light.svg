@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="164" height="38" viewBox="0 0 164 38" role="img" aria-label="Digital Card">
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="38" viewBox="0 0 154 38" role="img" aria-label="Digital Card">
   <defs>
     <linearGradient id="b_btn-card_light" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#4F46E5"/>
       <stop offset="100%" stop-color="#4338CA"/>
     </linearGradient>
     <clipPath id="bc_btn-card_light">
-      <rect x="0.5" y="0.5" width="163" height="37" rx="9"/>
+      <rect x="0.5" y="0.5" width="153" height="37" rx="9"/>
     </clipPath>
   </defs>
   <g clip-path="url(#bc_btn-card_light)">
-    <rect width="164" height="38" fill="url(#b_btn-card_light)"/>
-    <g transform="translate(25.1, 10.5) scale(0.70)" fill="none" stroke="#FFFFFF" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4.5" width="20" height="15" rx="2.5"/><circle cx="8.5" cy="10.2" r="2"/><path d="M5.4 15.8c.6-1.5 1.8-2.2 3.1-2.2s2.5.7 3.1 2.2"/><path d="M14.5 9.8h4.5M14.5 13.4h3.5"/></g>
-    <text x="49.1" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Digital Card</text>
+    <rect width="154" height="38" fill="url(#b_btn-card_light)"/>
+    <g transform="translate(20.1, 10.5) scale(0.70)" fill="none" stroke="#FFFFFF" stroke-width="1.95" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4.5" width="20" height="15" rx="2.5"/><circle cx="8.5" cy="10.2" r="2"/><path d="M5.4 15.8c.6-1.5 1.8-2.2 3.1-2.2s2.5.7 3.1 2.2"/><path d="M14.5 9.8h4.5M14.5 13.4h3.5"/></g>
+    <text x="44.1" y="23.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Digital Card</text>
   </g>
-  <rect x="0.5" y="0.5" width="163" height="37" rx="9" fill="none" stroke="#3730A3" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="153" height="37" rx="9" fill="none" stroke="#3730A3" stroke-width="1"/>
 </svg>

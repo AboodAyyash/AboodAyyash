@@ -797,6 +797,11 @@ ICON_ID_CARD = (
 )
 ICON_HEX = '<polygon points="12,2.2 20.5,7.1 20.5,16.9 12,21.8 3.5,16.9 3.5,7.1"/><circle cx="12" cy="12" r="3"/>'
 ICON_EMAIL = '<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3.2 6.2l7.6 5.4a2 2 0 0 0 2.4 0l7.6-5.4"/>'
+ICON_LINKEDIN = (
+    '<rect x="2.5" y="2.5" width="19" height="19" rx="3.5" fill="none" stroke="{color}" stroke-width="1.9"/>'
+    '<circle cx="7.6" cy="8.2" r="1.25" fill="{color}"/>'
+    '<path d="M7.6 11v5.8M11.6 16.8V11M11.6 13.4a2.4 2.4 0 0 1 4.8 0v3.4" fill="none" stroke="{color}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>'
+)
 ICON_WHATSAPP = (
     '<path d="M 3.92 15.46 A 9 9 0 1 1 6.72 18.79 L 2.8 20.6 Z" fill="none" stroke="{color}" stroke-width="2.05" stroke-linecap="round" stroke-linejoin="round"/>'
     '<path fill="{color}" d="M 9.35 7.45 c -0.22 -0.49 -0.45 -0.50 -0.66 -0.51 c -0.17 -0.01 -0.37 -0.01 -0.56 -0.01 c -0.20 0 -0.51 0.07 -0.78 0.37 c -0.27 0.29 -1.03 1.00 -1.03 2.45 c 0 1.44 1.05 2.84 1.20 3.04 c 0.15 0.20 2.03 3.25 5.01 4.43 c 2.48 0.98 2.98 0.78 3.52 0.73 c 0.54 -0.05 1.74 -0.71 1.98 -1.40 c 0.24 -0.69 0.24 -1.27 0.17 -1.40 c -0.07 -0.12 -0.27 -0.20 -0.56 -0.34 c -0.29 -0.15 -1.74 -0.86 -2.01 -0.96 c -0.27 -0.10 -0.46 -0.15 -0.66 0.15 c -0.20 0.29 -0.76 0.96 -0.93 1.15 c -0.17 0.20 -0.34 0.22 -0.64 0.07 c -0.29 -0.15 -1.24 -0.46 -2.37 -1.46 c -0.88 -0.78 -1.47 -1.75 -1.64 -2.04 c -0.17 -0.29 -0.02 -0.45 0.13 -0.60 c 0.13 -0.13 0.29 -0.34 0.44 -0.51 c 0.15 -0.17 0.20 -0.29 0.29 -0.49 c 0.10 -0.20 0.05 -0.37 -0.02 -0.51 c -0.07 -0.15 -0.64 -1.59 -0.90 -2.17 Z" transform="translate(-0.35, -0.35) scale(0.95)"/>'
@@ -823,10 +828,11 @@ def main():
         if not args.telemetry_only:
             build_hero(mode)
             build_stack(mode)
-            build_action_button("btn-card", "Digital Card", ICON_ID_CARD, variant="primary", width=164, mode=mode)
-            build_action_button("btn-org", "Qodra Systems", ICON_HEX, variant="secondary", width=178, mode=mode)
-            build_action_button("btn-email", "Email Me", ICON_EMAIL, variant="secondary", width=142, mode=mode)
-            build_action_button("btn-whatsapp", "WhatsApp", ICON_WHATSAPP, icon_mode="custom", variant="whatsapp", width=150, mode=mode)
+            build_action_button("btn-card", "Digital Card", ICON_ID_CARD, variant="primary", width=154, mode=mode)
+            build_action_button("btn-linkedin", "LinkedIn", ICON_LINKEDIN, icon_mode="custom", variant="secondary", width=136, mode=mode)
+            build_action_button("btn-org", "Qodra Systems", ICON_HEX, variant="secondary", width=168, mode=mode)
+            build_action_button("btn-email", "Email Me", ICON_EMAIL, variant="secondary", width=134, mode=mode)
+            build_action_button("btn-whatsapp", "WhatsApp", ICON_WHATSAPP, icon_mode="custom", variant="whatsapp", width=144, mode=mode)
 
     print("v3 AboodAyyash dashboard assets generated & XML-validated!")
 
