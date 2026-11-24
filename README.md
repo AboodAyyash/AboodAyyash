@@ -2,9 +2,9 @@
 
 <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=4">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=4">
-    <img alt="Abd-Alrahman Ayyash — Founder, CEO & Systems Architect at Qodra Systems" src="./assets/hero-dark.svg?v=4" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=5">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=5">
+    <img alt="Abd-Alrahman Ayyash — Founder, CEO & Systems Architect at Qodra Systems" src="./assets/hero-dark.svg?v=5" width="100%">
   </picture>
 </a>
 
@@ -38,9 +38,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=4">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=4">
-    <img alt="Executive Engineering Snapshot — 2026 Delivery Milestones, Platforms & Codebase DNA" src="./assets/telemetry-dark.svg?v=4" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=5">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=5">
+    <img alt="Executive Engineering Snapshot — 60-Day Velocity, 2026 Delivery Milestones & Codebase DNA" src="./assets/telemetry-dark.svg?v=5" width="100%">
   </picture>
 </p>
 

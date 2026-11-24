@@ -86,7 +86,7 @@
     <line x1="548" y1="64" x2="808" y2="64" stroke="#E2E8F0" stroke-width="1"/>
 
     <text x="564" y="88" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">role</text>
-    <text x="632" y="88" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">CEO · Founder</text>
+    <text x="632" y="88" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">Founder &amp; CEO</text>
 
     <text x="564" y="114" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">company</text>
     <text x="632" y="114" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#4F46E5">Qodra Systems</text>
@@ -99,7 +99,7 @@
 
     <text x="564" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">status</text>
     <circle cx="636" cy="188" r="3.2" fill="#059669"/>
-    <text x="646" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#059669">Building Qodra OS</text>
+    <text x="646" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#059669">Owner · Qodra OS</text>
   </g>
 
   <rect x="0.5" y="0.5" width="839" height="243" rx="14" fill="none" stroke="#E2E8F0" stroke-width="1"/>
