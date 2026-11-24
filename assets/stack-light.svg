@@ -1,136 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="288" viewBox="0 0 840 288" role="img" aria-label="Core Architecture, Technology Stack, and Engineering Principles">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="194" viewBox="0 0 840 194" role="img" aria-label="Core Production Stack">
   <defs>
-    <linearGradient id="st_bg_light" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FCFBF8"/>
-      <stop offset="100%" stop-color="#F4F1EA"/>
+    <linearGradient id="sbg_light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
     </linearGradient>
-    <clipPath id="st_clip_light">
-      <rect x="0.5" y="0.5" width="839" height="287" rx="14"/>
+    <clipPath id="sclip_light">
+      <rect x="0.5" y="0.5" width="839" height="193" rx="14"/>
     </clipPath>
   </defs>
-  <g clip-path="url(#st_clip_light)">
-    <rect width="840" height="288" fill="url(#st_bg_light)"/>
-    <line x1="20" y1="1.5" x2="820" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="1"/>
-    <text x="26" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.1" fill="#4338CA">CORE ARCHITECTURE &amp; TECHNOLOGY STACK</text>
-    <text x="814" y="30" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="600" letter-spacing="0.6" fill="#5D5A73">PRIMARY CORE HIGHLIGHTED</text>
-    <circle cx="32" cy="62" r="4" fill="#2563EB"/><text x="46" y="66.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.8" font-weight="600" fill="#17162B">Mobile &amp; Web</text>
-            <rect x="178" y="49" width="78" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="188" cy="62" r="2.3" fill="#2563EB"/>
-            <text x="221.0" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">Flutter</text>
+  <g clip-path="url(#sclip_light)">
+    <rect width="840" height="194" fill="url(#sbg_light)"/>
+    <line x1="20" y1="1.5" x2="820" y2="1.5" stroke="#FFFFFF" stroke-opacity="0.90" stroke-width="1"/>
+    <text x="26" y="30" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.0" fill="#4F46E5">CORE PRODUCTION STACK</text>
+    <text x="814" y="30" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.5" fill="#64748B">WHAT I SHIP WITH DAILY</text>
+    <line x1="24" y1="44" x2="816" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="418" y1="54" x2="418" y2="178" stroke="#E2E8F0" stroke-width="1"/>
+    <line x1="24" y1="114" x2="816" y2="114" stroke="#E2E8F0" stroke-width="1"/>
+    <circle cx="30" cy="58" r="3.2" fill="#4F46E5"/><text x="41" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#64748B">DATA &amp; BACKEND CORE</text>
+            <rect x="26" y="73" width="96" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="74.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">PostgreSQL</text>
             
-            <rect x="264" y="49" width="56" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="274" cy="62" r="2.3" fill="#2563EB"/>
-            <text x="296.0" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">Dart</text>
+            <rect x="130" y="73" width="81" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="170.5" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">PL/pgSQL</text>
             
-            <rect x="328" y="49" width="100" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="338" cy="62" r="2.3" fill="#2563EB"/>
-            <text x="382.0" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">TypeScript</text>
+            <rect x="219" y="73" width="74" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="256.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Node.js</text>
             
-            <rect x="436" y="49" width="59" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
+            <rect x="301" y="73" width="66" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="334.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Python</text>
+            <circle cx="438" cy="58" r="3.2" fill="#059669"/><text x="449" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#64748B">MOBILE &amp; CLIENT UX</text>
+            <rect x="434" y="73" width="74" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="471.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Flutter</text>
             
-            <text x="465.5" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">React</text>
+            <rect x="516" y="73" width="58" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="545.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Dart</text>
             
-            <rect x="503" y="49" width="74" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
+            <rect x="582" y="73" width="96" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="630.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">TypeScript</text>
             
-            <text x="540.0" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Next.js</text>
+            <rect x="686" y="73" width="74" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="723.0" y="91" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Next.js</text>
+            <circle cx="30" cy="128" r="3.2" fill="#4F46E5"/><text x="41" y="132" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#64748B">GOVERNED AI &amp; AGENTS</text>
+            <rect x="26" y="143" width="74" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="63.0" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Awni AI</text>
             
-            <rect x="585" y="49" width="59" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
+            <rect x="108" y="143" width="111" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="163.5" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Arabic Voice</text>
             
-            <text x="614.5" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Swift</text>
+            <rect x="227" y="143" width="66" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="260.0" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Claude</text>
             
-            <rect x="652" y="49" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
+            <rect x="301" y="143" width="66" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="334.0" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Gemini</text>
+            <circle cx="438" cy="128" r="3.2" fill="#059669"/><text x="449" y="132" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="0.8" fill="#64748B">CLOUD &amp; DELIVERY</text>
+            <rect x="434" y="143" width="58" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="463.0" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">AWS</text>
             
-            <text x="685.0" y="66" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Kotlin</text>
-            <line x1="24" y1="82" x2="816" y2="82" stroke="#E6E1D8" stroke-width="1"/><circle cx="32" cy="101" r="4" fill="#166549"/><text x="46" y="105.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.8" font-weight="600" fill="#17162B">Backend &amp; Data</text>
-            <rect x="178" y="88" width="100" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="188" cy="101" r="2.3" fill="#166549"/>
-            <text x="232.0" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">PostgreSQL</text>
+            <rect x="500" y="143" width="111" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="555.5" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Google Cloud</text>
             
-            <rect x="286" y="88" width="85" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="296" cy="101" r="2.3" fill="#166549"/>
-            <text x="332.5" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">PL/pgSQL</text>
+            <rect x="619" y="143" width="81" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="659.5" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Supabase</text>
             
-            <rect x="379" y="88" width="85" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="389" cy="101" r="2.3" fill="#166549"/>
-            <text x="425.5" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">Supabase</text>
+            <rect x="708" y="143" width="66" height="28" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+            <text x="741.0" y="161" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#1E293B">Docker</text>
             
-            <rect x="472" y="88" width="74" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="509.0" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Node.js</text>
-            
-            <rect x="554" y="88" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="587.0" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Python</text>
-            
-            <rect x="628" y="88" width="54" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="655.0" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Go</text>
-            
-            <rect x="690" y="88" width="59" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="719.5" y="105" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Redis</text>
-            <line x1="24" y1="121" x2="816" y2="121" stroke="#E6E1D8" stroke-width="1"/><circle cx="32" cy="140" r="4" fill="#4338CA"/><text x="46" y="144.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.8" font-weight="600" fill="#17162B">AI &amp; Agents</text>
-            <rect x="178" y="127" width="93" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="188" cy="140" r="2.3" fill="#4338CA"/>
-            <text x="228.5" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">AI Agents</text>
-            
-            <rect x="279" y="127" width="152" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="289" cy="140" r="2.3" fill="#4338CA"/>
-            <text x="359.0" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">Arabic &amp; Voice AI</text>
-            
-            <rect x="439" y="127" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="472.0" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">OpenAI</text>
-            
-            <rect x="513" y="127" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="546.0" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Claude</text>
-            
-            <rect x="587" y="127" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="620.0" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Gemini</text>
-            
-            <rect x="661" y="127" width="59" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="690.5" y="144" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Llama</text>
-            <line x1="24" y1="160" x2="816" y2="160" stroke="#E6E1D8" stroke-width="1"/><circle cx="32" cy="179" r="4" fill="#C2590C"/><text x="46" y="183.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.8" font-weight="600" fill="#17162B">Cloud &amp; Infra</text>
-            <rect x="178" y="166" width="54" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="188" cy="179" r="2.3" fill="#C2590C"/>
-            <text x="209.0" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">AWS</text>
-            
-            <rect x="240" y="166" width="115" height="26" rx="7" fill="#FFFFFF" stroke="#B8B2EE" stroke-width="1"/>
-            <circle cx="250" cy="179" r="2.3" fill="#C2590C"/>
-            <text x="301.5" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#1E1B4B">Google Cloud</text>
-            
-            <rect x="363" y="166" width="66" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="396.0" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Docker</text>
-            
-            <rect x="437" y="166" width="59" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="466.5" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Azure</text>
-            
-            <rect x="504" y="166" width="81" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="544.5" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">Firebase</text>
-            
-            <rect x="593" y="166" width="126" height="26" rx="7" fill="#F4F1EA" stroke="#DDD8CE" stroke-width="1"/>
-            
-            <text x="656.0" y="183" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="500" fill="#4D4A61">GitHub Actions</text>
-            
-    <line x1="24" y1="210" x2="816" y2="210" stroke="#E6E1D8" stroke-width="1"/>
-        <text x="26.0" y="233" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.2" font-weight="700" letter-spacing="0.8" fill="#4338CA">01 · UNIFIED DATA CORE</text>
-        <text x="26.0" y="252" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">Single real-time relational ledger,</text>
-        <text x="26.0" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">zero fragmented enterprise silos.</text>
-        <line x1="280.0" y1="222" x2="280.0" y2="274" stroke="#E6E1D8" stroke-width="1"/>
-        <text x="290.0" y="233" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.2" font-weight="700" letter-spacing="0.8" fill="#4338CA">02 · GOVERNED AI</text>
-        <text x="290.0" y="252" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">Role-scoped agents with full audit</text>
-        <text x="290.0" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">trails and human team approval.</text>
-        <line x1="544.0" y1="222" x2="544.0" y2="274" stroke="#E6E1D8" stroke-width="1"/>
-        <text x="554.0" y="233" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10.2" font-weight="700" letter-spacing="0.8" fill="#4338CA">03 · FIELD-READY CRAFT</text>
-        <text x="554.0" y="252" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">Cross-platform UX engineered for</text>
-        <text x="554.0" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" fill="#5D5A73">high-volume daily operations.</text>
-        
   </g>
-  <rect x="0.5" y="0.5" width="839" height="287" rx="14" fill="none" stroke="#DDD8CE" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="839" height="193" rx="14" fill="none" stroke="#E2E8F0" stroke-width="1"/>
 </svg>

@@ -1,150 +1,106 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="272" viewBox="0 0 840 272" role="img" aria-label="Abd-Alrahman Ayyash — CEO at Qodra Systems">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="244" viewBox="0 0 840 244" role="img" aria-label="Abd-Alrahman Ayyash — Founder, CEO and Systems Architect">
   <defs>
     <style>
       .beacon-ring {
         transform-box: fill-box;
         transform-origin: center;
-        animation: beacon 2.8s cubic-bezier(0.2, 0.7, 0.3, 1) infinite;
-      }
-      .core-glow {
-        animation: breathe 4.6s ease-in-out infinite;
+        animation: beacon 3s cubic-bezier(0.2, 0.7, 0.3, 1) infinite;
       }
       @keyframes beacon {
-        0% { transform: scale(1); opacity: 0.72; }
-        70% { transform: scale(2.4); opacity: 0; }
+        0% { transform: scale(1); opacity: 0.7; }
+        72% { transform: scale(2.4); opacity: 0; }
         100% { transform: scale(2.4); opacity: 0; }
       }
-      @keyframes breathe {
-        0%, 100% { opacity: 0.78; }
-        50% { opacity: 1; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .beacon-ring, .core-glow { animation: none !important; }
-      }
+      @media (prefers-reduced-motion: reduce) { .beacon-ring { animation: none !important; } }
     </style>
-    <linearGradient id="bg_dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111026"/>
-      <stop offset="100%" stop-color="#181634"/>
+    <linearGradient id="hbg_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F131E"/>
+      <stop offset="100%" stop-color="#141A29"/>
     </linearGradient>
-    <radialGradient id="glow_dark" cx="82%" cy="50%" r="42%">
-      <stop offset="0%" stop-color="#5A52EA" stop-opacity="0.32"/>
-      <stop offset="100%" stop-color="#5A52EA" stop-opacity="0"/>
+    <radialGradient id="hglow_dark" cx="82%" cy="48%" r="40%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="sheen_dark" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.14"/>
-      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    <linearGradient id="htop_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#818CF8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="top_accent_dark" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4F46E5" stop-opacity="0"/>
-      <stop offset="26%" stop-color="#6366F1" stop-opacity="0.92"/>
-      <stop offset="74%" stop-color="#A5B4FC" stop-opacity="0.92"/>
-      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
-    </linearGradient>
-    <pattern id="dots_dark" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#9A8DF8" fill-opacity="0.10"/>
+    <pattern id="hdots_dark" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#818CF8" fill-opacity="0.09"/>
     </pattern>
-    <linearGradient id="dot_fade_dark" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="78%" stop-color="#FFFFFF" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+    <linearGradient id="hdfade_dark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="52%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="82%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.7"/>
     </linearGradient>
-    <mask id="dot_mask_dark">
-      <rect width="840" height="272" fill="url(#dot_fade_dark)"/>
+    <mask id="hdmask_dark">
+      <rect width="840" height="244" fill="url(#hdfade_dark)"/>
     </mask>
-    <clipPath id="clip_dark">
-      <rect x="0.5" y="0.5" width="839" height="271" rx="16"/>
+    <clipPath id="hclip_dark">
+      <rect x="0.5" y="0.5" width="839" height="243" rx="14"/>
     </clipPath>
-    
-    <linearGradient id="hero_dark_b0" gradientUnits="userSpaceOnUse" x1="69.92" y1="-136.42" x2="134.28" y2="73.96">
-      <stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#2563EB"/>
-    </linearGradient>
-    <linearGradient id="hero_dark_b1" gradientUnits="userSpaceOnUse" x1="83.19" y1="128.76" x2="-131.19" y2="79.31">
-      <stop offset="0" stop-color="#818CF8"/><stop offset="1" stop-color="#4F46E5"/>
-    </linearGradient>
-    <linearGradient id="hero_dark_b2" gradientUnits="userSpaceOnUse" x1="-153.11" y1="7.66" x2="-3.09" y2="-153.27">
-      <stop offset="0" stop-color="#60A5FA"/><stop offset="1" stop-color="#3B82F6"/>
-    </linearGradient>
-    
   </defs>
 
-  <g clip-path="url(#clip_dark)">
-    <rect width="840" height="272" fill="url(#bg_dark)"/>
-    <rect width="840" height="272" fill="url(#dots_dark)" mask="url(#dot_mask_dark)"/>
-    <rect width="840" height="272" fill="url(#glow_dark)" class="core-glow"/>
-    <rect x="0" y="0" width="840" height="2.5" fill="url(#top_accent_dark)"/>
-    <rect x="0" y="2.5" width="840" height="1" fill="url(#sheen_dark)"/>
+  <g clip-path="url(#hclip_dark)">
+    <rect width="840" height="244" fill="url(#hbg_dark)"/>
+    <rect width="840" height="244" fill="url(#hdots_dark)" mask="url(#hdmask_dark)"/>
+    <rect width="840" height="244" fill="url(#hglow_dark)"/>
+    <rect x="0" y="0" width="840" height="2" fill="url(#htop_dark)"/>
+    <line x1="20" y1="2.5" x2="820" y2="2.5" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
 
-    <!-- Living Qodra Constellation -->
-    <circle cx="694" cy="136" r="76" fill="none" stroke="#3A3666" stroke-opacity="0.40" stroke-width="1" stroke-dasharray="3 5"/><polygon points="839.51,205.00 826.51,227.52 800.51,227.52 787.51,205.00 800.51,182.48 826.51,182.48" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><polygon points="720.00,274.00 707.00,296.52 681.00,296.52 668.00,274.00 681.00,251.48 707.00,251.48" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><polygon points="600.49,205.00 587.49,227.52 561.49,227.52 548.49,205.00 561.49,182.48 587.49,182.48" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><polygon points="600.49,67.00 587.49,89.52 561.49,89.52 548.49,67.00 561.49,44.48 587.49,44.48" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><polygon points="720.00,-2.00 707.00,20.52 681.00,20.52 668.00,-2.00 681.00,-24.52 707.00,-24.52" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><polygon points="839.51,67.00 826.51,89.52 800.51,89.52 787.51,67.00 800.51,44.48 826.51,44.48" fill="none" stroke="#3A3666" stroke-opacity="0.28" stroke-width="1"/><line x1="694.0" y1="136.0" x2="759.8" y2="98.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="3.6s" begin="0s" repeatCount="indefinite" path="M 730.4 115.0 L 733.8 113.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="3.6s" begin="0s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="788.82,98.00 774.32,123.11 745.32,123.11 730.82,98.00 745.32,72.89 774.32,72.89" fill="#5A52EA" fill-opacity="0.22" stroke="#5A52EA" stroke-opacity="0.58" stroke-width="1.2"/><text x="759.8" y="101.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">AI</text><line x1="694.0" y1="136.0" x2="759.8" y2="174.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="4.2s" begin="0.7s" repeatCount="indefinite" path="M 730.4 157.0 L 733.8 159.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="4.2s" begin="0.7s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="788.82,174.00 774.32,199.11 745.32,199.11 730.82,174.00 745.32,148.89 774.32,148.89" fill="#2E7564" fill-opacity="0.22" stroke="#2E7564" stroke-opacity="0.58" stroke-width="1.2"/><text x="759.8" y="177.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">ERP</text><line x1="694.0" y1="136.0" x2="694.0" y2="212.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="3.9s" begin="1.4s" repeatCount="indefinite" path="M 694.0 178.0 L 694.0 182.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="3.9s" begin="1.4s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="723.00,212.00 708.50,237.11 679.50,237.11 665.00,212.00 679.50,186.89 708.50,186.89" fill="#9C5B82" fill-opacity="0.22" stroke="#9C5B82" stroke-opacity="0.58" stroke-width="1.2"/><text x="694.0" y="215.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">POS</text><line x1="694.0" y1="136.0" x2="628.2" y2="174.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="4.5s" begin="2.1s" repeatCount="indefinite" path="M 657.6 157.0 L 654.2 159.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="4.5s" begin="2.1s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="657.18,174.00 642.68,199.11 613.68,199.11 599.18,174.00 613.68,148.89 642.68,148.89" fill="#8B5CF6" fill-opacity="0.22" stroke="#8B5CF6" stroke-opacity="0.58" stroke-width="1.2"/><text x="628.2" y="177.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">NAV</text><line x1="694.0" y1="136.0" x2="628.2" y2="98.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="3.8s" begin="2.8s" repeatCount="indefinite" path="M 657.6 115.0 L 654.2 113.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="3.8s" begin="2.8s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="657.18,98.00 642.68,123.11 613.68,123.11 599.18,98.00 613.68,72.89 642.68,72.89" fill="#3B82F6" fill-opacity="0.22" stroke="#3B82F6" stroke-opacity="0.58" stroke-width="1.2"/><text x="628.2" y="101.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">CLOUD</text><line x1="694.0" y1="136.0" x2="694.0" y2="60.0" stroke="#3A3666" stroke-opacity="0.65" stroke-width="1.1"/>
-        <circle r="2.2" fill="#A5B4FC" opacity="0">
-          <animateMotion dur="4.4s" begin="3.5s" repeatCount="indefinite" path="M 694.0 94.0 L 694.0 90.0"/>
-          <animate attributeName="opacity" values="0;0.95;0.95;0" keyTimes="0;0.18;0.82;1" dur="4.4s" begin="3.5s" repeatCount="indefinite"/>
-        </circle>
-        <polygon points="723.00,60.00 708.50,85.11 679.50,85.11 665.00,60.00 679.50,34.89 708.50,34.89" fill="#C89B3C" fill-opacity="0.22" stroke="#C89B3C" stroke-opacity="0.58" stroke-width="1.2"/><text x="694.0" y="63.8" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="#F6F4FF" fill-opacity="0.94">HR</text>
-    <polygon points="740.00,136.00 717.00,175.84 671.00,175.84 648.00,136.00 671.00,96.16 717.00,96.16" fill="none" stroke="#655DF0" stroke-opacity="0.32" stroke-width="1"/>
-    <polygon points="734.00,136.00 714.00,170.64 674.00,170.64 654.00,136.00 674.00,101.36 714.00,101.36" fill="#111024" stroke="#655DF0" stroke-width="1.8"/>
-    
-    <g transform="translate(694,136) scale(0.132)">
-      <path d="M 178.00 0.00 L 123.50 94.40 L 60.00 57.74 L 60.00 -154.15 L 89.00 -154.15 Z" fill="url(#hero_dark_b0)" stroke="url(#hero_dark_b0)" stroke-width="10" stroke-linejoin="round"/>
-      <path d="M 103.50 129.04 L 89.00 154.15 L -89.00 154.15 L -143.50 59.76 L -80.00 23.09 Z" fill="url(#hero_dark_b1)" stroke="url(#hero_dark_b1)" stroke-width="10" stroke-linejoin="round"/>
-      <path d="M -163.50 25.11 L -178.00 0.00 L -89.00 -154.15 L 20.00 -154.15 L 20.00 -80.83 Z" fill="url(#hero_dark_b2)" stroke="url(#hero_dark_b2)" stroke-width="10" stroke-linejoin="round"/>
-    </g>
-    
+    <!-- Left: Founder Identity (cleanly bounded <= 505px) -->
+    <rect x="32" y="28" width="234" height="28" rx="14" fill="#161D30" stroke="#2B3656" stroke-width="1"/>
+    <circle cx="48" cy="42" r="4" fill="#34D399" class="beacon-ring"/>
+    <circle cx="48" cy="42" r="3.6" fill="#34D399"/>
+    <text x="61" y="46.2" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.9" fill="#818CF8">FOUNDER &amp; CEO · QODRA</text>
 
-    <!-- Left Content -->
-    <rect x="34" y="34" width="218" height="28" rx="14" fill="#201D40" stroke="#3E3972" stroke-width="1"/>
-    <circle cx="50" cy="48" r="4" fill="#4FBF92" class="beacon-ring"/>
-    <circle cx="50" cy="48" r="3.8" fill="#4FBF92"/>
-    <text x="63" y="52.2" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.0" fill="#A296FA">CEO · QODRA SYSTEMS</text>
+    <text x="32" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.8" fill="#F8FAFC">Abd-Alrahman Ayyash</text>
 
-    <text x="34" y="104" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.7" fill="#F6F4FF">Abd-Alrahman Ayyash</text>
+    <text x="32" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#818CF8">Systems Architect  ·  Enterprise Software &amp; AI</text>
 
-    <text x="34" y="131" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.2" font-weight="600" fill="#A296FA">Chief Executive Officer  ·  Founder &amp; Systems Architect</text>
-
-    <text x="34" y="161" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#BCB8D4">Building unified business operating systems, permission-aware AI agents,</text>
-    <text x="34" y="182" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#BCB8D4">indoor navigation platforms, and custom software for modern enterprises.</text>
+    <text x="32" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#9BA6C0">Architecting single-database ERP engines, governed Arabic AI agents,</text>
+    <text x="32" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#9BA6C0">and cross-platform operational software from Amman, Jordan.</text>
 
     
-        <rect x="34" y="206" width="140" height="30" rx="8" fill="#1D1B38" stroke="#35315E" stroke-width="1"/>
-        <g transform="translate(45, 215)" fill="none" stroke="#A296FA" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11s3.5-3.1 3.5-5.8a3.5 3.5 0 1 0-7 0C2.5 7.9 6 11 6 11z"/><circle cx="6" cy="5.2" r="1.2"/></g>
-        <text x="63" y="225.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#DCD7FF">Amman, Jordan</text>
+        <rect x="32" y="184" width="138" height="30" rx="8" fill="#141B2B" stroke="#242E48" stroke-width="1"/>
+        <g transform="translate(43, 193)" fill="none" stroke="#818CF8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11s3.5-3.1 3.5-5.8a3.5 3.5 0 1 0-7 0C2.5 7.9 6 11 6 11z"/><circle cx="6" cy="5.2" r="1.2"/></g>
+        <text x="61" y="203.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#CBD5E1">Amman, Jordan</text>
         
-        <rect x="184" y="206" width="160" height="30" rx="8" fill="#1D1B38" stroke="#35315E" stroke-width="1"/>
-        <g transform="translate(195, 215)" fill="none" stroke="#A296FA" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.6"/><path d="M1.4 6h9.2M6 1.4a7 7 0 0 1 0 9.2 7 7 0 0 1 0-9.2z"/></g>
-        <text x="213" y="225.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#DCD7FF">qodrasystems.com</text>
+        <rect x="180" y="184" width="144" height="30" rx="8" fill="#141B2B" stroke="#242E48" stroke-width="1"/>
+        <g transform="translate(191, 193)" fill="none" stroke="#818CF8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="6,1.2 10.2,3.6 10.2,8.4 6,10.8 1.8,8.4 1.8,3.6"/></g>
+        <text x="209" y="203.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#CBD5E1">@qodrasystems</text>
         
-        <rect x="354" y="206" width="178" height="30" rx="8" fill="#1D1B38" stroke="#35315E" stroke-width="1"/>
-        <g transform="translate(365, 215)" fill="none" stroke="#A296FA" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M6 1.3L1.5 3.8v4.4L6 10.7l4.5-2.5V3.8L6 1.3z"/><path d="M1.5 3.8L6 6.3l4.5-2.5M6 6.3v4.4"/></g>
-        <text x="383" y="225.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#DCD7FF">MENA Enterprise SaaS</text>
+        <rect x="334" y="184" width="158" height="30" rx="8" fill="#141B2B" stroke="#242E48" stroke-width="1"/>
+        <g transform="translate(345, 193)" fill="none" stroke="#818CF8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5L5 5.5l2.5 2.5L10.5 4"/><path d="M8 4h2.5v2.5"/></g>
+        <text x="363" y="203.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#CBD5E1">Building since 2018</text>
         
+
+    <!-- Right: Distinct Builder / Systems Architect Spec Card (x=548..808) -->
+    <rect x="548" y="30" width="260" height="184" rx="12" fill="#0C101A" stroke="#232C45" stroke-width="1"/>
+    <circle cx="566" cy="48" r="4" fill="#818CF8" fill-opacity="0.7"/>
+    <circle cx="580" cy="48" r="4" fill="#34D399" fill-opacity="0.7"/>
+    <circle cx="594" cy="48" r="4" fill="#64748B" fill-opacity="0.45"/>
+    <text x="794" y="51.5" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="10" font-weight="600" fill="#64748B">founder.profile</text>
+    <line x1="548" y1="64" x2="808" y2="64" stroke="#232C45" stroke-width="1"/>
+
+    <text x="564" y="88" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">role</text>
+    <text x="632" y="88" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#E2E8F0">CEO &amp; Architect</text>
+
+    <text x="564" y="114" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">company</text>
+    <text x="632" y="114" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#818CF8">Qodra Systems</text>
+
+    <text x="564" y="140" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">core</text>
+    <text x="632" y="140" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#E2E8F0">PL/pgSQL · Flutter</text>
+
+    <text x="564" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">ai</text>
+    <text x="632" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#E2E8F0">Awni RBAC Agents</text>
+
+    <text x="564" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">status</text>
+    <circle cx="636" cy="188" r="3.2" fill="#34D399"/>
+    <text x="646" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#34D399">Shipping Qodra OS</text>
   </g>
 
-  <rect x="0.5" y="0.5" width="839" height="271" rx="16" fill="none" stroke="#2F2C52" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="839" height="243" rx="14" fill="none" stroke="#232B42" stroke-width="1"/>
 </svg>
