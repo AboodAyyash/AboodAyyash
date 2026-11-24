@@ -1,14 +1,12 @@
-<div align="center">
-
-<a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=5">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=5">
-    <img alt="Abd-Alrahman Ayyash — Founder, CEO & Systems Architect at Qodra Systems" src="./assets/hero-dark.svg?v=5" width="100%">
-  </picture>
-</a>
-
-<br>
+<p align="center">
+  <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=5">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=5">
+      <img alt="Abd-Alrahman Ayyash — Founder, CEO & Systems Architect at Qodra Systems" src="./assets/hero-dark.svg?v=5" width="100%">
+    </picture>
+  </a>
+</p>
 
 <p align="center">
   <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-card-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-card-light.svg?v=5"><img alt="Digital Business Card" src="./assets/btn-card-dark.svg?v=5" height="38"></picture></a>&nbsp;
@@ -17,8 +15,6 @@
   <a href="mailto:a.ayyash@qodrasystems.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-email-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg?v=5"><img alt="Email Abd-Alrahman Ayyash" src="./assets/btn-email-dark.svg?v=5" height="38"></picture></a>&nbsp;
   <a href="https://wa.me/962787679639" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/btn-whatsapp-dark.svg?v=5"><source media="(prefers-color-scheme: light)" srcset="./assets/btn-whatsapp-light.svg?v=5"><img alt="WhatsApp" src="./assets/btn-whatsapp-dark.svg?v=5" height="38"></picture></a>
 </p>
-
-</div>
 
 ---
 
