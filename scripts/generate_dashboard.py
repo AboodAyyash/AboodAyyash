@@ -450,7 +450,7 @@ def build_hero(mode="dark"):
     <line x1="548" y1="64" x2="808" y2="64" stroke="{panel_border}" stroke-width="1"/>
 
     <text x="564" y="88" font-family="{FONT_MONO}" font-size="11.5" fill="{mono_key}">role</text>
-    <text x="632" y="88" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" fill="{mono_val}">CEO &amp; Architect</text>
+    <text x="632" y="88" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" fill="{mono_val}">CEO · Founder</text>
 
     <text x="564" y="114" font-family="{FONT_MONO}" font-size="11.5" fill="{mono_key}">company</text>
     <text x="632" y="114" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" fill="{accent}">Qodra Systems</text>
@@ -463,7 +463,7 @@ def build_hero(mode="dark"):
 
     <text x="564" y="192" font-family="{FONT_MONO}" font-size="11.5" fill="{mono_key}">status</text>
     <circle cx="636" cy="188" r="3.2" fill="{dot_live}"/>
-    <text x="646" y="192" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" fill="{dot_live}">Shipping Qodra OS</text>
+    <text x="646" y="192" font-family="{FONT_MONO}" font-size="11.5" font-weight="600" fill="{dot_live}">Building Qodra OS</text>
   </g>
 
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{border}" stroke-width="1"/>
@@ -527,7 +527,8 @@ def build_action_button(filename, label, icon_markup, icon_mode="stroke", varian
 
 
 # ---------------------------------------------------------------------------
-# 3. LIVE ENGINEERING TELEMETRY PANEL (840 x 216, fixed margins + peak callout)
+# 3. EXECUTIVE ENGINEERING SNAPSHOT (840 x 216 — 2026 Delivery + KPIs + Codebase DNA)
+#    No fragile GitHub commit curve; 100% authentic product milestones & real repo DNA
 # ---------------------------------------------------------------------------
 def build_telemetry(metrics, mode="dark"):
     W, H = 840, 216
@@ -538,13 +539,13 @@ def build_telemetry(metrics, mode="dark"):
         accent = "#818CF8"
         ink = "#F8FAFC"
         muted = "#8B95B0"
-        grid_line = "#1E2538"
         divider = "#20273C"
-        curve_stroke = "#818CF8"
-        curve_fill_top = "#6366F1"
         dot_live = "#34D399"
         bar_bg = "#1B2236"
-        tag_bg = "#161E31"
+        q_bg = "#151C2E"
+        q_border = "#25304D"
+        q_active_bg = "#122620"
+        q_active_border = "#1E5240"
     else:
         bg1, bg2 = "#FFFFFF", "#F8FAFC"
         border = "#E2E8F0"
@@ -552,61 +553,58 @@ def build_telemetry(metrics, mode="dark"):
         accent = "#4F46E5"
         ink = "#0F172A"
         muted = "#64748B"
-        grid_line = "#EDF2F7"
         divider = "#E2E8F0"
-        curve_stroke = "#4F46E5"
-        curve_fill_top = "#4F46E5"
         dot_live = "#059669"
         bar_bg = "#E2E8F0"
-        tag_bg = "#EEF2FF"
+        q_bg = "#F8FAFC"
+        q_border = "#CBD5E1"
+        q_active_bg = "#ECFDF5"
+        q_active_border = "#A7F3D0"
 
-    vals = metrics["monthly_values"]
-    months = metrics["months"]
-    scaled = [math.pow(max(v, 1), 0.45) for v in vals]
-    max_s = max(scaled) or 1.0
-    min_s = min(scaled)
+    # Zone A: 2026 Product Delivery Milestones (Q1 -> Q4, x=26..372)
+    milestones = [
+        ("Q1", "Indoor Navigation & Mobile Core", False),
+        ("Q2", "Vertical Sector Platforms & UI", False),
+        ("Q3", "Qodra OS Single-DB ERP Engine", False),
+        ("Q4", "Awni AI Agents & Multi-Branch", True),
+    ]
+    ms_svgs = [
+        f'<text x="26" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">2026 PRODUCT DELIVERY</text>',
+        f'<line x1="44" y1="84" x2="44" y2="184" stroke="{divider}" stroke-width="1.5"/>',
+    ]
+    for idx, (q, desc, is_active) in enumerate(milestones):
+        my = 84 + idx * 32
+        bg = q_active_bg if is_active else q_bg
+        bd = q_active_border if is_active else q_border
+        q_col = dot_live if is_active else accent
+        txt_col = ink if is_active else muted
+        fw = "600" if is_active else "500"
+        pulse = f'<circle cx="356" cy="{my + 1}" r="3.8" fill="{dot_live}" class="peak-halo"/>' if is_active else ""
+        live_dot = f'<circle cx="356" cy="{my + 1}" r="3.2" fill="{dot_live}"/>' if is_active else ""
+        ms_svgs.append(f"""
+        <rect x="26" y="{my - 11}" width="36" height="24" rx="6" fill="{bg}" stroke="{bd}" stroke-width="1"/>
+        <text x="44" y="{my + 4.5}" text-anchor="middle" font-family="{FONT_MONO}" font-size="10.5" font-weight="700" fill="{q_col}">{escape(q)}</text>
+        <text x="74" y="{my + 4.5}" font-family="{FONT_SANS}" font-size="12.2" font-weight="{fw}" fill="{txt_col}">{escape(desc)}</text>
+        {pulse}{live_dot}
+        """)
 
-    x_start, x_end = 28.0, 356.0
-    y_top, y_bot = 78.0, 170.0
-    step_x = (x_end - x_start) / (len(vals) - 1)
-
-    pts = []
-    for i, sv in enumerate(scaled):
-        norm = (sv - min_s * 0.65) / max(max_s - min_s * 0.65, 1e-6)
-        x = x_start + i * step_x
-        y = y_bot - norm * (y_bot - y_top)
-        pts.append((x, y))
-
-    curve_d = smooth_curve_path(pts)
-    area_d = f"{curve_d} L {pts[-1][0]:.2f} {y_bot:.2f} L {pts[0][0]:.2f} {y_bot:.2f} Z"
-    last_x, last_y = pts[-1]
-
-    month_labels = []
-    for i, m in enumerate(months):
-        mx = x_start + i * step_x
-        col = accent if i == len(months) - 1 else muted
-        fw = "700" if i == len(months) - 1 else "500"
-        month_labels.append(
-            f'<text x="{mx:.1f}" y="191" text-anchor="middle" font-family="{FONT_MONO}" font-size="10.5" font-weight="{fw}" fill="{col}">{escape(m)}</text>'
-        )
-
-    # Zone B: 2x2 KPI Grid (all dynamic labels — never stale on Jan 1!)
+    # Zone B: 2x2 Executive KPI Grid (100% consistent with public profile — zero contradiction)
     kpis = [
-        (metrics["contributions_12m"], "12M ACTIVITY", 394, 96, accent),
-        (metrics["total_repos"], "REPOSITORIES", 510, 96, ink),
-        (metrics["active_repos_12m"], "ACTIVE (12M)", 394, 166, dot_live),
-        (metrics["building_since"], "BUILDING SINCE", 510, 166, ink),
+        ("4", "CORE PLATFORMS", 404, 96, accent),
+        ("12", "QODRA OS MODULES", 506, 96, dot_live),
+        (metrics["total_repos"], "REPOSITORIES", 404, 166, ink),
+        (metrics["building_since"], "BUILDING SINCE", 506, 166, ink),
     ]
     kpi_svgs = []
     for val, lbl, kx, ky, col in kpis:
         kpi_svgs.append(f"""
-        <text x="{kx}" y="{ky}" font-family="{FONT_MONO}" font-size="21" font-weight="700" letter-spacing="-0.5" fill="{col}">{escape(val)}</text>
-        <text x="{kx}" y="{ky + 17}" font-family="{FONT_MONO}" font-size="9.5" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(lbl)}</text>
+        <text x="{kx}" y="{ky}" font-family="{FONT_MONO}" font-size="22" font-weight="700" letter-spacing="-0.5" fill="{col}">{escape(val)}</text>
+        <text x="{kx}" y="{ky + 17}" font-family="{FONT_MONO}" font-size="9.2" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(lbl)}</text>
         """)
 
-    # Zone C: Language Footprint Bar + 5 Legend Rows
+    # Zone C: Real Language Footprint Bar + 5 Legend Rows (auto-updated via GraphQL)
     langs = metrics["languages"]
-    bar_x, bar_y, bar_w, bar_h = 630, 72, 184, 8
+    bar_x, bar_y, bar_w, bar_h = 634, 72, 180, 8
     seg_svgs = []
     cur_x = bar_x
     total_pct = sum(l["pct"] for l in langs) or 100.0
@@ -623,16 +621,16 @@ def build_telemetry(metrics, mode="dark"):
         ly = 104 + idx * 20.5
         c = l["color_dark"] if mode == "dark" else l["color_light"]
         legend_svgs.append(f"""
-        <circle cx="635" cy="{ly - 3.5}" r="3.5" fill="{c}"/>
-        <text x="647" y="{ly}" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="{ink}">{escape(l['name'])}</text>
+        <circle cx="639" cy="{ly - 3.5}" r="3.5" fill="{c}"/>
+        <text x="651" y="{ly}" font-family="{FONT_SANS}" font-size="12" font-weight="500" fill="{ink}">{escape(l['name'])}</text>
         <text x="814" y="{ly}" text-anchor="end" font-family="{FONT_MONO}" font-size="11.2" font-weight="600" fill="{muted}">{l['pct']:.1f}%</text>
         """)
 
-    freshness = f"AGGREGATED · SYNCED {metrics['updated_label']}"
-    dot_x = 814 - len(freshness) * 6.6 - 12
+    freshness = f"QODRA SYSTEMS · {metrics['updated_label']}"
+    dot_x = 814 - len(freshness) * 6.5 - 12
     dna_title = f"CODEBASE DNA ({metrics['total_repos']} REPOS)"
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Engineering Telemetry and 12-Month Velocity">
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Executive Engineering Snapshot and Codebase DNA">
   <defs>
     <style>
       .peak-halo {{
@@ -651,10 +649,6 @@ def build_telemetry(metrics, mode="dark"):
       <stop offset="0%" stop-color="{bg1}"/>
       <stop offset="100%" stop-color="{bg2}"/>
     </linearGradient>
-    <linearGradient id="tarea_{mode}" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="{curve_fill_top}" stop-opacity="0.30"/>
-      <stop offset="100%" stop-color="{curve_fill_top}" stop-opacity="0.01"/>
-    </linearGradient>
     <clipPath id="tclip_{mode}">
       <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14"/>
     </clipPath>
@@ -667,37 +661,26 @@ def build_telemetry(metrics, mode="dark"):
     <rect width="{W}" height="{H}" fill="url(#tbg_{mode})"/>
     <line x1="20" y1="1.5" x2="{W-20}" y2="1.5" stroke="#FFFFFF" stroke-opacity="{sheen_op}" stroke-width="1"/>
 
-    <!-- Header Strip (strictly right-aligned inside x=814 margin) -->
-    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING TELEMETRY  ·  12-MONTH VELOCITY</text>
+    <!-- Header Strip -->
+    <text x="26" y="30" font-family="{FONT_MONO}" font-size="11" font-weight="700" letter-spacing="1.0" fill="{accent}">ENGINEERING SNAPSHOT  ·  ARCHITECTURE &amp; DELIVERY</text>
     <circle cx="{dot_x:.1f}" cy="26.5" r="3.2" fill="{dot_live}"/>
     <text x="814" y="30" text-anchor="end" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.4" fill="{muted}">{escape(freshness)}</text>
     <line x1="24" y1="44" x2="{W-24}" y2="44" stroke="{divider}" stroke-width="1"/>
 
-    <!-- Zone A: Velocity Chart + Peak Callout -->
-    <line x1="26" y1="78" x2="360" y2="78" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
-    <line x1="26" y1="124" x2="360" y2="124" stroke="{grid_line}" stroke-width="1" stroke-dasharray="2 4"/>
-    <line x1="26" y1="170" x2="360" y2="170" stroke="{grid_line}" stroke-width="1"/>
-
-    <rect x="26" y="53" width="76" height="19" rx="5" fill="{tag_bg}"/>
-    <text x="64" y="65.8" text-anchor="middle" font-family="{FONT_MONO}" font-size="9.5" font-weight="600" fill="{accent}">{escape(metrics['peak_label'])}</text>
-
-    <path d="{area_d}" fill="url(#tarea_{mode})"/>
-    <path d="{curve_d}" fill="none" stroke="{curve_stroke}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="4.5" fill="{dot_live}" class="peak-halo"/>
-    <circle cx="{last_x:.2f}" cy="{last_y:.2f}" r="4" fill="{dot_live}" stroke="{bg1}" stroke-width="1.5"/>
-    {''.join(month_labels)}
+    <!-- Zone A: 2026 Delivery Roadmap -->
+    {''.join(ms_svgs)}
 
     <!-- Dividers -->
-    <line x1="378" y1="56" x2="378" y2="196" stroke="{divider}" stroke-width="1"/>
-    <line x1="612" y1="56" x2="612" y2="196" stroke="{divider}" stroke-width="1"/>
+    <line x1="386" y1="56" x2="386" y2="196" stroke="{divider}" stroke-width="1"/>
+    <line x1="618" y1="56" x2="618" y2="196" stroke="{divider}" stroke-width="1"/>
 
     <!-- Zone B: 2x2 KPIs -->
-    <line x1="392" y1="128" x2="598" y2="128" stroke="{divider}" stroke-width="1"/>
-    <line x1="496" y1="62" x2="496" y2="190" stroke="{divider}" stroke-width="1"/>
+    <line x1="400" y1="128" x2="604" y2="128" stroke="{divider}" stroke-width="1"/>
+    <line x1="494" y1="62" x2="494" y2="190" stroke="{divider}" stroke-width="1"/>
     {''.join(kpi_svgs)}
 
     <!-- Zone C: Codebase DNA -->
-    <text x="630" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">{escape(dna_title)}</text>
+    <text x="634" y="62" font-family="{FONT_MONO}" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="{muted}">{escape(dna_title)}</text>
     <rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="4" fill="{bar_bg}"/>
     <g clip-path="url(#tbar_{mode})">
       {''.join(seg_svgs)}
