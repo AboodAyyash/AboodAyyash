@@ -78,24 +78,24 @@
     <text x="634" y="62" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="9.8" font-weight="600" letter-spacing="0.6" fill="#8B95B0">CORE EXPERTISE</text>
     <rect x="634" y="74" width="180" height="8" rx="4" fill="#1B2236"/>
     <g clip-path="url(#tbar_dark)">
-      <rect x="634.00" y="74" width="160.50" height="8" fill="#6366F1"/><rect x="796.00" y="74" width="9.30" height="8" fill="#34D399"/><rect x="806.80" y="74" width="2.50" height="8" fill="#94A3B8"/><rect x="810.40" y="74" width="2.50" height="8" fill="#818CF8"/>
+      <rect x="634.00" y="74" width="106.50" height="8" fill="#6366F1"/><rect x="742.00" y="74" width="41.70" height="8" fill="#34D399"/><rect x="785.20" y="74" width="21.90" height="8" fill="#818CF8"/><rect x="808.60" y="74" width="3.90" height="8" fill="#94A3B8"/>
     </g>
     
         <circle cx="639" cy="105.5" r="3.5" fill="#6366F1"/>
         <text x="651" y="109" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">Flutter / Dart</text>
-        <text x="814" y="109" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">90%</text>
+        <text x="814" y="109" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">60%</text>
         
         <circle cx="639" cy="129.5" r="3.5" fill="#34D399"/>
-        <text x="651" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">HTML &amp; JavaScript</text>
-        <text x="814" y="133" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">6%</text>
+        <text x="651" y="133" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">Kotlin / Swift</text>
+        <text x="814" y="133" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">24%</text>
         
-        <circle cx="639" cy="153.5" r="3.5" fill="#94A3B8"/>
-        <text x="651" y="157" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">Python</text>
-        <text x="814" y="157" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">2%</text>
+        <circle cx="639" cy="153.5" r="3.5" fill="#818CF8"/>
+        <text x="651" y="157" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">HTML &amp; JavaScript</text>
+        <text x="814" y="157" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">13%</text>
         
-        <circle cx="639" cy="177.5" r="3.5" fill="#818CF8"/>
-        <text x="651" y="181" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">Kotlin / Swift</text>
-        <text x="814" y="181" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">2%</text>
+        <circle cx="639" cy="177.5" r="3.5" fill="#94A3B8"/>
+        <text x="651" y="181" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#F8FAFC">Python</text>
+        <text x="814" y="181" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.2" font-weight="600" fill="#8B95B0">3%</text>
         
   </g>
 

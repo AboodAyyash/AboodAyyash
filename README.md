@@ -34,9 +34,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=8">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=8">
-    <img alt="Executive Engineering Snapshot — 2026 Delivery, 25+ Qodra OS Modules, 9+ Industry Sectors & Core Expertise" src="./assets/telemetry-dark.svg?v=8" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=9">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=9">
+    <img alt="Executive Engineering Snapshot — 2026 Delivery, 25+ Qodra OS Modules, 9+ Industry Sectors & Core Expertise" src="./assets/telemetry-dark.svg?v=9" width="100%">
   </picture>
 </p>
 
