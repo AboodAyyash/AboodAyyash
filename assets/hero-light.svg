@@ -50,7 +50,6 @@
     <rect x="0" y="0" width="840" height="2" fill="url(#htop_light)"/>
     <line x1="20" y1="2.5" x2="820" y2="2.5" stroke="#FFFFFF" stroke-opacity="0.90" stroke-width="1"/>
 
-    <!-- Left: Executive Identity (cleanly bounded <= 505px) -->
     <rect x="32" y="28" width="214" height="28" rx="14" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
     <circle cx="48" cy="42" r="4" fill="#059669" class="beacon-ring"/>
     <circle cx="48" cy="42" r="3.6" fill="#059669"/>
@@ -58,10 +57,10 @@
 
     <text x="32" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.8" fill="#0F172A">Abd-Alrahman Ayyash</text>
 
-    <text x="32" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#4F46E5">Systems Architect  ·  Enterprise Software &amp; AI</text>
+    <text x="32" y="123" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" fill="#4F46E5">Chief Executive Officer  ·  Flutter &amp; Enterprise Systems</text>
 
-    <text x="32" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#475569">Architecting single-database ERP engines, governed Arabic AI agents,</text>
-    <text x="32" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#475569">and cross-platform operational software from Amman, Jordan.</text>
+    <text x="32" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#475569">Leading Qodra Systems — delivering Qodra OS, governed Arabic AI agents,</text>
+    <text x="32" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.8" fill="#475569">indoor navigation, and cross-platform Flutter apps from Amman, Jordan.</text>
 
     
         <rect x="32" y="184" width="138" height="30" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
@@ -77,7 +76,6 @@
         <text x="363" y="203.2" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#334155">Building since 2018</text>
         
 
-    <!-- Right: Distinct Builder / Systems Architect Spec Card (x=548..808) -->
     <rect x="548" y="30" width="260" height="184" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
     <circle cx="566" cy="48" r="4" fill="#4F46E5" fill-opacity="0.7"/>
     <circle cx="580" cy="48" r="4" fill="#059669" fill-opacity="0.7"/>
@@ -92,10 +90,10 @@
     <text x="632" y="114" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#4F46E5">Qodra Systems</text>
 
     <text x="564" y="140" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">core</text>
-    <text x="632" y="140" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">PL/pgSQL · Flutter</text>
+    <text x="632" y="140" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">Flutter · Dart</text>
 
-    <text x="564" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">ai</text>
-    <text x="632" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">Awni RBAC Agents</text>
+    <text x="564" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">web</text>
+    <text x="632" y="166" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" font-weight="600" fill="#0F172A">HTML · JavaScript</text>
 
     <text x="564" y="192" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" fill="#64748B">status</text>
     <circle cx="636" cy="188" r="3.2" fill="#059669"/>

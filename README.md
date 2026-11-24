@@ -1,9 +1,9 @@
 <p align="center">
   <a href="https://qodrasystems.com/en/card/a.ayyash" target="_blank">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=6">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=6">
-      <img alt="Abd-Alrahman Ayyash — Chief Executive Officer at Qodra Systems" src="./assets/hero-dark.svg?v=6" width="100%">
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg?v=7">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg?v=7">
+      <img alt="Abd-Alrahman Ayyash — Chief Executive Officer at Qodra Systems" src="./assets/hero-dark.svg?v=7" width="100%">
     </picture>
   </a>
 </p>
@@ -21,30 +21,30 @@
 ### About & Current Focus
 
 > **Chief Executive Officer at [Qodra Systems](https://github.com/qodrasystems)** · Amman, Jordan.
-> Building mission-critical operational software since 2018 — where relational database integrity, real-time execution, and clean UX power day-to-day enterprise operations.
+> Building high-performance cross-platform `Flutter` apps and enterprise operational systems since 2018 — uniting clean UX, real-time performance, and practical business execution.
 
-| Focus Area | Architecture & Execution |
+| Focus Area | Leadership & Execution |
 | :--- | :--- |
-| **[Qodra OS](https://qodrasystems.com/en/systems/erp.html)** | Single-database `PL/pgSQL` ERP core — accounting, POS, multi-branch inventory, HR/payroll & MENA e-invoicing synchronized in real time |
+| **[Qodra OS](https://qodrasystems.com/en/systems/erp.html)** | Unified 25+ module enterprise ERP — accounting, POS, multi-branch inventory, HR/payroll & MENA e-invoicing synchronized in real time |
 | **[Awni AI Agents](https://qodrasystems.com/en/systems/ai.html)** | Role-scoped Arabic & voice AI agents executing operational workflows inside company systems with audit trails & human approval |
-| **[Indoor Navigation](https://qodrasystems.com/en/systems/navigation.html)** | GPS-free cross-floor wayfinding, live venue heatmaps & high-throughput `Flutter` / web operational platforms |
+| **[Indoor Navigation](https://qodrasystems.com/en/systems/navigation.html)** | GPS-free cross-floor wayfinding, live venue heatmaps & high-throughput `Flutter` mobile / web platforms |
 | **[Qodra Systems](https://github.com/qodrasystems)** | Full 25+ module enterprise suite, industry verticals & company engineering hub at **[`@qodrasystems`](https://github.com/qodrasystems)** |
 
 ---
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=7">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=7">
-    <img alt="Executive Engineering Snapshot — 2026 Delivery, 25+ Qodra OS Modules, 9+ Industry Sectors & Codebase DNA" src="./assets/telemetry-dark.svg?v=7" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetry-dark.svg?v=8">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/telemetry-light.svg?v=8">
+    <img alt="Executive Engineering Snapshot — 2026 Delivery, 25+ Qodra OS Modules, 9+ Industry Sectors & Core Expertise" src="./assets/telemetry-dark.svg?v=8" width="100%">
   </picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg?v=3">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg?v=3">
-    <img alt="Core Production Stack" src="./assets/stack-dark.svg?v=3" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg?v=4">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg?v=4">
+    <img alt="Core Production Stack — Flutter, Dart, HTML, JavaScript, AI & Cloud" src="./assets/stack-dark.svg?v=4" width="100%">
   </picture>
 </p>
 
